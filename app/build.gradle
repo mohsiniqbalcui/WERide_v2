@@ -1,0 +1,149 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+// Apply the Crashlytics Gradle plugin
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.pool.uber"
+        minSdkVersion 21// from 16
+        //  resConfigs "en", "mdpi", "hdpi", "xhdpi", "xxhdpi", "nodpi"
+        resConfigs "en", "xhdpi"
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+    }
+
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "12g"
+    }
+
+    /*sourceSets {
+        main {
+            res.srcDirs =
+                    [
+                            *//*'src/main/res/layouts/activities',
+                            'src/main/res/layouts/fragments',
+                            'src/main/res/layouts/content',*//*
+                            'src/main/res/layouts',
+                            'src/main/res'
+                    ]
+        }
+    }*/
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+
+
+//keep this false untill final release otherwise create problem in debuging
+
+            //shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable = true
+            renderscriptDebuggable = true
+            ndk {
+                abiFilters "armeabi-v7a", "armeabi" // includes ARM SO files only, so no x86 SO file
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.google.firebase:firebase-core:17.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.firebase:firebase-messaging:20.1.6'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.2.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    implementation 'com.google.firebase:firebase-database:19.3.0'
+    implementation 'com.google.firebase:firebase-auth:19.3.1'
+    implementation 'com.google.firebase:firebase-storage:19.1.1'
+    implementation 'com.google.firebase:firebase-inappmessaging:19.0.6'
+
+    // mutiple firebae sign in implementation
+//    implementation 'com.firebaseui:firebase-ui-auth:6.2.0'
+
+
+    implementation 'com.google.firebase:firebase-analytics:17.4.0'
+
+    implementation 'com.google.firebase:firebase-crashlytics:17.0.0'
+
+/*
+    implementation 'com.google.firebase:firebase-analytics:17.0.0'
+*/
+    implementation 'com.google.android.gms:play-services-maps:17.0.0'
+    /* https://stackoverflow.com/questions/54638080/places-for-android-api-deprecated-alternative/55045772#55045772
+    implementation 'com.google.android.gms:play-services-places:17.0.0'
+*/
+
+    implementation 'com.google.android.libraries.places:places:2.2.0'
+
+    // implementation 'com.google.android.libraries.places:places-compat:2.1.0'
+
+    implementation 'com.google.android.gms:play-services-auth:17.0.0'
+    implementation 'com.google.android.gms:play-services-identity:17.0.0'
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    implementation 'com.google.android.gms:play-services-nearby:17.0.0'
+
+    implementation 'com.firebase:geofire-android:3.0.0'
+
+    implementation 'com.google.gms:google-services:4.3.3'
+
+    // If you have a problem with Glide, please use the same Glide version or simply open an issue
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.github.jd-alexander:library:1.1.0'
+
+
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+
+
+    implementation 'com.squareup.okhttp3:okhttp:4.2.0'
+    // implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+
+    //noinspection UseOfBundledGooglePlayServices
+
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+//    implementation 'com.github.jd-alexander:library:1.1.0'
+
+    testImplementation 'junit:junit:4.12'
+
+//    implementation 'com.jakewharton:butterknife:8.8.1'
+
+    implementation 'com.shobhitpuri.custombuttons:google-signin:1.0.0'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'org.jetbrains:annotations:15.0'
+
+    // Android plugin 3.0.0 or higher.
+    implementation 'com.sangcomz:FishBun:0.11.4'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    /*run time permission acessing for marmelow error handling*/
+    implementation 'com.karumi:dexter:6.1.0'
+
+
+}
+
+/* ERROR: Plugin with id 'com.google.gms.google-services' not found.
+
+apply plugin: 'com.google.gms.google-services'*/

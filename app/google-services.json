@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "803722975697",
+    "firebase_url": "https://weride-android-6dffd.firebaseio.com",
+    "project_id": "weride-android-6dffd",
+    "storage_bucket": "weride-android-6dffd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:803722975697:android:24ea9b2d5ec21a1ea528f0",
+        "android_client_info": {
+          "package_name": "com.pool.uber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "803722975697-fjo34prdlblhvljkr9qmu1begi0md95t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pool.uber",
+            "certificate_hash": "930dfdf2fe5cadd82f130cf24ccbca52b9698105"
+          }
+        },
+        {
+          "client_id": "803722975697-t0jk33islu8jckn5hbm6i2v0a2pvmmto.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCe93sycrmwAYd6meP6l3U_AbxDU0Pg_gg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "803722975697-t0jk33islu8jckn5hbm6i2v0a2pvmmto.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

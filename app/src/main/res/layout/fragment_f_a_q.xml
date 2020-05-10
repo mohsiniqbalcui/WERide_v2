@@ -1,0 +1,76 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pool.Weride.fragments.FAQ">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:cursorVisible="true"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Why WE Ride"
+                android:padding="10dp"
+                style="bold"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
+
+            <TextView
+                android:id="@+id/txtquestion"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffffff"
+                android:scrollHorizontally="false"
+                android:inputType="textMultiLine"
+                android:layout_gravity="center"
+                android:autoLink="web"
+                android:lineSpacingExtra="5dp"
+                android:text="@string/intro"
+                android:clickable="false"
+                android:focusable="false"
+                android:scrollbars="vertical"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Benfit from our system"
+                android:padding="10dp"
+                android:layout_marginTop="30dp"
+                style="bold"
+                android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
+
+
+            <TextView
+                android:id="@+id/txtquestion1"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffffff"
+                android:layout_marginTop="10dp"
+                android:scrollHorizontally="false"
+                android:inputType="textMultiLine"
+                android:layout_gravity="center"
+                android:text="@string/so"
+                android:clickable="false"
+                android:focusable="false"
+                android:scrollbars="vertical"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

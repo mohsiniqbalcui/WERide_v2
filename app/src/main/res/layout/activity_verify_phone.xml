@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.pool.Weride.verifyPhoneActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="206dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="70dp"
+            android:background="@drawable/weride"
+            android:layout_marginStart="70dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/relativeLayout"
+        android:layout_marginTop="-50dp" />
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="401dp"
+        android:layout_height="476dp"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="-116dp"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/buttonSignIn"
+            android:layout_width="227dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="78dp"
+            android:layout_marginTop="93dp"
+            android:layout_marginEnd="76dp"
+            android:layout_marginBottom="125dp"
+            android:background="@drawable/button_gradient"
+            android:text="@string/confirm_otp"
+            android:textAllCaps="false"
+            android:textColor="#cdd8f1" />
+
+        <EditText
+            android:id="@+id/editTextCode"
+            android:layout_width="266dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/progressbar"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="83dp"
+            android:layout_marginEnd="57dp"
+            android:digits="0123456789"
+            android:drawableEnd="@drawable/icons8_security_checked_24px_1"
+            android:drawablePadding="10dp"
+            android:hint="code"
+            android:inputType="phone"
+            android:maxLength="10" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:outlineAmbientShadowColor="@color/design_default_color_primary"
+            android:layout_below="@id/textView"
+            android:layout_centerHorizontal="true"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/tvnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginBottom="-42dp"
+            android:text="Enter one time security code sended to   : -"
+            android:textColor="#000000 "
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="168dp"
+            android:layout_marginBottom="79dp"
+            android:text="Please Wait 60 seconds " />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_names">WERide</string>
+    <string name="title_activity_driver_map">Map</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="email_id">email id</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="failed">Authentication failed</string>
+    <string name="image">image</string>
+    <string name="create_a_new_account">Create a new Account!</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main1">MainActivity1</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Rides Filter</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">profile</string>
+    <string name="menu_slideshow">bus booking</string>
+    <string name="menu_tools">setting</string>
+    <string name="menu_share">help</string>
+    <string name="menu_send">History</string>
+    <string name="username">Email</string>
+    <string name="sign_in">Sign In</string>
+    <string name="register">Register</string>
+    <string name="full_name">Full Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="already_having_account">Already Having an Account?</string>
+    <string name="log_in">Log In</string>
+    <string name="not_having_account">Not Having an Account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="logout">Logout</string>
+    <string name="my_number">+923424475733</string>
+
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="city">Present Location</string>
+    <string name="no_text"> </string>
+
+    <string name="permission_refused">Permission was not granted</string>
+    <string name="permission_request_title">Special Permission Request</string>
+    <string name="app_permission_notice">This permission request is very important to your app functionality.
+        If it is not granted your app might not work the way it is intended</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="help_support"><![CDATA[Help & Support]]></string>
+    <string name="rides_history">Rides History</string>
+    <string name="wallet_transaction"><![CDATA[Wallet & Transaction]]></string>
+    <string name="how_it_works">FAQ</string>
+    <string name="call_we_ride_support">Call WE Ride Support</string>
+    <string name="refer_a_friends">Refer a Friends</string>
+    <string name="log_out">Log out</string>
+    <string name="setting">Setting</string>
+    <string name="intro">There are various applications and ride booking applications out there that help people in their daily commute.
+        The mainstream applications available aid the commute of a single person with a calculated fare based on the distance traveled.\n However, the car driver in this case is upset over the fact that they are riding with two empty seats and also if they drop a rider at a certain destination and then another ride is pinged to them with the same destination as before they have to  burn the fuel twice which in turn increases their travel expenses. </string>
+    <string name="so">So, with our devised system based on the concept of carpooling, we provide these drivers with a platform in which they can take multiple riders to the same destination which will save them their fuel expenses. For the riders the fare for the ride will also be distributed among the number of people traveling. The application will be android based with a web module for branding and some core functionalities.</string>
+    <string name="confirm_otp">confirm OTP</string>
+    <string name="spinner_title">select category</string>
+    <string name="get_started">Get Started</string>
+    <string name="driver">Driver</string>
+    <string name="choose_a_rider_or_driver_position">Choose a Rider or Driver Position</string>
+    <string name="rider">Rider</string>
+</resources>

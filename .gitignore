@@ -1,0 +1,15 @@
+.gradle/*
+.idea/*
+build/
+gradle/wrapper/gradle-wrapper.properties
+gradlew.bat
+local.properties
+*.log
+*.iml
+.idea/workspace.xml
+.idea/misc.xml
+.idea/instapk.xml
+instapk.log
+.hgignore
+instapk.properties
+instapk.log*
