@@ -136,6 +136,8 @@ public class signin_activity extends AppCompatActivity {
 		
 		String name = "";
 		
+		//test push
+		
 		mAuthListner = new FirebaseAuth.AuthStateListener() {
 			@Override
 			public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
