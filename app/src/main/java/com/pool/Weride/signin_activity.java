@@ -135,7 +135,6 @@ public class signin_activity extends AppCompatActivity {
 		
 		
 		String name = "";
-		String test = "";
 		
 		mAuthListner = new FirebaseAuth.AuthStateListener() {
 			@Override
