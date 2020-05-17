@@ -9,14 +9,18 @@
     tools:context="com.pool.Weride.userType">
 
     <!-- dark blue color #6537B5-->
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="102dp"
-        android:layout_height="51dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="200dp"
+        android:layout_width="102sp"
+        android:layout_height="51sp"
+        android:layout_marginTop="25sp"
+        android:layout_marginEnd="20sp"
+        android:layout_marginBottom="200sp"
         android:gravity="center_horizontal"
         android:text="@string/driver"
         android:textAlignment="center"
@@ -32,9 +36,9 @@
 
     <LinearLayout
         android:id="@+id/linearLayout2"
-        android:layout_width="407dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="224dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="224sp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,8 +48,8 @@
         <Button
             style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
             android:id="@+id/riderUser"
-            android:layout_width="206dp"
-            android:layout_height="190dp"
+            android:layout_width="206sp"
+            android:layout_height="190sp"
             android:layout_gravity="center_vertical"
             android:background="@drawable/rider">
 
@@ -55,10 +59,10 @@
         <Button
             style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
             android:id="@+id/driverUser"
-            android:layout_width="179dp"
-            android:layout_height="180dp"
+            android:layout_width="179sp"
+            android:layout_height="180sp"
             android:layout_gravity="center_vertical"
-            android:layout_marginEnd="0dp"
+            android:layout_marginEnd="0sp"
             android:background="@drawable/driver">
 
         </Button>
@@ -67,8 +71,8 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="304dp"
-        android:layout_height="40dp"
+        android:layout_width="304sp"
+        android:layout_height="40sp"
         android:fontFamily="@font/roboto_medium"
         android:gravity="center"
         android:text="@string/get_started"
@@ -83,10 +87,10 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="403dp"
-        android:layout_height="34dp"
-        android:layout_marginTop="168dp"
-        android:layout_marginBottom="68dp"
+        android:layout_width="403sp"
+        android:layout_height="34sp"
+        android:layout_marginTop="168sp"
+        android:layout_marginBottom="68sp"
         android:fontFamily="@font/roboto_medium"
         android:foregroundGravity="center_horizontal"
         android:gravity="center"
@@ -104,11 +108,11 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="108dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="89dp"
-        android:layout_marginBottom="200dp"
+        android:layout_width="108sp"
+        android:layout_height="50sp"
+        android:layout_marginTop="25sp"
+        android:layout_marginEnd="89sp"
+        android:layout_marginBottom="200sp"
         android:gravity="center_horizontal"
         android:text="@string/rider"
         android:textColor="@color/text_color"

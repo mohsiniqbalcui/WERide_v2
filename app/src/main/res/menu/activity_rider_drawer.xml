@@ -20,11 +20,11 @@
         <item
             android:id="@+id/nav_Groups"
             android:icon="@drawable/ic_group"
-            android:title="Groups" />
+            android:title="Rider Groups" />
         <item
             android:id="@+id/nav_packages"
             android:icon="@drawable/location"
-            android:title="Packages" />
+            android:title="Rider Packages" />
 
         <item
             android:id="@+id/nav_settings"

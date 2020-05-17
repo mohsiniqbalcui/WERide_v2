@@ -6,6 +6,7 @@ import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -53,7 +54,6 @@ public class DriverSettingsActivity extends AppCompatActivity {
     private String mProfileImageUrl;
 
     private Uri resultUri;
-
     private RadioGroup mRadioGroup;
 
 
@@ -61,7 +61,8 @@ public class DriverSettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_settings);
-	
+	try {
+	 
 	
 		mNameField = findViewById(R.id.name);
 		mPhoneField = findViewById(R.id.phone);
@@ -96,7 +97,10 @@ public class DriverSettingsActivity extends AppCompatActivity {
                 saveUserInformation();
             }
         });
-	
+        
+    }catch (Exception pE){
+        Log.d("driverSetting", ""+pE.getMessage());
+    }
 	}
     
     

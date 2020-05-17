@@ -27,8 +27,6 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.textfield.TextInputLayout;
-import com.sangcomz.fishbun.FishBun;
-import com.sangcomz.fishbun.adapter.image.impl.GlideAdapter;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
@@ -110,6 +108,7 @@ public class Addproperty extends AppCompatActivity {
 					mIntent.setType("images/*");
 					startActivityForResult(Intent.createChooser(mIntent,"Select Pictures"), 1);
 			*/
+			/*
 				FishBun.with(Addproperty.this)
 						.setImageAdapter(new GlideAdapter())
 						.setIsUseDetailView(false)
@@ -132,7 +131,7 @@ public class Addproperty extends AppCompatActivity {
 						.setSelectCircleStrokeColor(Color.BLACK)
 						.isStartInAllView(false)
 						.startAlbum();
-				
+			*/
 			}
 		});
 		
@@ -232,7 +231,7 @@ public class Addproperty extends AppCompatActivity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		if (resultCode == 1) {
-			List<Bitmap> bitmaps = new ArrayList<>();
+			final List<Bitmap> bitmaps = new ArrayList<>();
 			ClipData mClipData = data.getClipData();
 			
 			if (mClipData != null) {

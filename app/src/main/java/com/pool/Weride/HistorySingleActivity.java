@@ -3,6 +3,7 @@ package com.pool.Weride;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.text.format.DateFormat;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -67,15 +68,17 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
 
     private GoogleMap mMap;
     private SupportMapFragment mMapFragment;
+    String TAG="HistorySingleActivity";
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history_single);
+        
 		try {
         polylines = new ArrayList<>();
-
         rideId = getIntent().getExtras().getString("rideId");
-		
+            Log.d(TAG, "onCreate: ride id accessed");
 			mMapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map1);
         mMapFragment.getMapAsync(this);
     
@@ -96,9 +99,12 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
         getRideInformation();
 		
 		} catch (Exception pE) {
+            Log.e(TAG, "onCreate:"+pE.getMessage());
 			pE.printStackTrace();
 		}
+		
 	}
+	
 	//-----------------------getRideInformation()
 	/*
 	 *
@@ -124,6 +130,7 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
                                 getUserInformation("Customers", customerId);
                             }
                         }
+                        
                         if (child.getKey().equals("driver")){
                             driverId = child.getValue().toString();
                             if(!driverId.equals(currentUserId)){
@@ -202,6 +209,7 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
 	
 	
 	private void getUserInformation(String otherUserDriverOrCustomer, String otherUserId) {
+        Log.d(TAG, "getUserInformation: ");
         DatabaseReference mOtherUserDB = FirebaseDatabase.getInstance().getReference().child("Users").child(otherUserDriverOrCustomer).child(otherUserId);
         mOtherUserDB.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
@@ -227,12 +235,14 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
     }
 
     private String getDate(Long time) {
+        Log.d(TAG, "getDate: ");
         Calendar cal = Calendar.getInstance(Locale.getDefault());
         cal.setTimeInMillis(time*1000);
         String date = DateFormat.format("MM-dd-yyyy hh:mm", cal).toString();
         return date;
     }
     private void getRouteToMarker() {
+        Log.d(TAG, "getRouteToMarker: ");
         Routing routing = new Routing.Builder()
                 .travelMode(AbstractRouting.TravelMode.DRIVING)
                 .withListener(this)

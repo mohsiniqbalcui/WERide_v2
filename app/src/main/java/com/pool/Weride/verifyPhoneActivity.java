@@ -175,7 +175,7 @@ public class verifyPhoneActivity extends AppCompatActivity {
 									finish();
 								}
 								if (type == "rider") {
-									startActivity(new Intent(getApplicationContext(), CustomerMapActivity.class));
+									startActivity(new Intent(getApplicationContext(), RiderMapActivity.class));
 									finish();
 								}
 								
@@ -184,7 +184,7 @@ public class verifyPhoneActivity extends AppCompatActivity {
 							}
 							
 							//verification successful we will start the profile activity
-							Intent intent = new Intent(verifyPhoneActivity.this, CustomerMapActivity.class);
+							Intent intent = new Intent(verifyPhoneActivity.this, RiderMapActivity.class);
 							startActivity(intent);
 							
 						} else {

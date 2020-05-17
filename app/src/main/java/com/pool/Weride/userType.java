@@ -4,18 +4,23 @@ package com.pool.Weride;
 import android.Manifest;
 import android.Manifest.permission;
 import android.app.AlertDialog;
+import android.content.ContentProviderOperation.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -34,6 +39,10 @@ import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 
 import java.util.List;
 
+import nl.dionsegijn.konfetti.KonfettiView;
+import nl.dionsegijn.konfetti.models.Shape;
+import nl.dionsegijn.konfetti.models.Size;
+
 public class userType extends AppCompatActivity {
 	
 	Button driverbtn;
@@ -45,14 +54,20 @@ public class userType extends AppCompatActivity {
 	SharedPreferences mSharedPreferences;
 	FirebaseAuth firebaseAuth;
 	private FirebaseAnalytics mFirebaseAnalytics;
+	String TAG = "userType";
+	KonfettiView viewKonfetti;
+	
 	
 	/*two operation are validated internet connection checking in app opening and second location permission*/
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState)
+	{
 		try {
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.activity_user_type);
 			
+			mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+			firebaseAuth = FirebaseAuth.getInstance();
 			
 			Dexter.withContext(this)
 					.withPermissions(
@@ -72,52 +87,50 @@ public class userType extends AppCompatActivity {
 						
 						}
 					}).check();
-			mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 			
-		//	context = userType.this;
+			viewKonfetti = (KonfettiView)findViewById(R.id.viewKonfetti);
+			
+			
+			viewKonfetti.build()
+					.addColors(Color.YELLOW, Color.GREEN, Color.MAGENTA)
+					.setDirection(0.0, 359.0)
+					.setSpeed(1f, 5f)
+					.setFadeOutEnabled(true)
+					.setTimeToLive(2000L)
+					.addShapes(Shape.RECT, Shape.CIRCLE)
+					.addSizes(new Size(12, 5))
+					.setPosition(-50f, viewKonfetti.getWidth() + 50f, -50f, -50f)
+					.streamFor(300, 5000L);
+			
+			
+			//	context = userType.this;
 		//	isLocationEnabled(); // location setting enabling
-			if (!isConnected(userType.this)) {
+			
+			
+			
+		/*	if (!isConnected(userType.this)) {
 				buildDialog(userType.this).show();
 			}
 		else {
 			Toast.makeText(userType.this, "Welcome", Toast.LENGTH_SHORT).show();
-		}
-		
+		}*/
 		
 		driverbtn = findViewById(R.id.driverUser);
-			driverbtn.setOnClickListener(v -> driverClick());
+			driverbtn.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(final View v) {
+					driverClick();
+				}
+			});
 		riderbtn = findViewById(R.id.riderUser);
-			riderbtn.setOnClickListener(v -> riderClick());
-		firebaseAuth = FirebaseAuth.getInstance();
-			//havePermission();
-		if (firebaseAuth.getCurrentUser() != null) {
-			
-			SharedPreferences mSharedPreferences1 = getSharedPreferences("type", MODE_PRIVATE);
-			String type = mSharedPreferences1.getString("type", "");
-			
-			try {
-				
-				/* in case driver and rider both are already */
-				assert type != null;
-				if (type.equals("driver")) {
-					startActivity(new Intent(getApplicationContext(), DriverMapActivity.class));
-					finish();
+			riderbtn.setOnClickListener(new OnClickListener() {
+				@Override
+				public void onClick(final View v) {
+					riderClick();
 				}
-				if (type.equals("rider")) {
-					startActivity(new Intent(getApplicationContext(), CustomerMapActivity.class));
-					finish();
-				}
-				
-			} catch (Exception e) {
-				Toast.makeText(this, "shared Preference storage", Toast.LENGTH_SHORT).show();
-			}
+			});
 			
-			
-			startActivity(new Intent(userType.this, CustomerMapActivity.class));
-			finish();
-		}
-			/* permisio */
-		
+		checkUserType();
 		
 		
 		if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -136,18 +149,53 @@ public class userType extends AppCompatActivity {
 			
 			
 			mSharedPreferences = getSharedPreferences("type", MODE_PRIVATE); // 0 - for private mode
-		editor = mSharedPreferences.edit();
+		    editor = mSharedPreferences.edit();
 		
 		
 		} catch (Exception pE) {
 			Toast.makeText(context, ""+pE, Toast.LENGTH_LONG).show();
 			pE.printStackTrace();
+			Log.e("------------error------",""+pE.getMessage());
 			
 		}
 	}// oncreate
 	
+	private void checkUserType()
+	{
+		//havePermission();
+		if (firebaseAuth.getCurrentUser() != null) {
+			
+			SharedPreferences mSharedPreferences1 = getSharedPreferences("type", MODE_PRIVATE);
+			String type = mSharedPreferences1.getString("type", "");
+			
+			try {
+				
+				/* in case driver and rider both are already */
+				assert type != null;
+				if (type.equals("driver")) {
+					Log.d(TAG, "checkUserType: DriverMapActivity opened");
+					startActivity(new Intent(getApplicationContext(),driver_nav_drawer.class));
+					finish();
+				}
+				if (type.equals("rider")) {
+					Log.d(TAG, "checkUserType: RiderMapActivity opened");
+					startActivity(new Intent(getApplicationContext(), rider_nav_layout.class));
+					finish();
+				}
+				
+			} catch (Exception e) {
+				Toast.makeText(this, "shared Preference storage", Toast.LENGTH_SHORT).show();
+			}
+			
+			startActivity(new Intent(userType.this, RiderMapActivity.class));
+			finish();
+		}
+		
+	}
 	
-	public boolean isConnected(Context context) {
+	
+	public boolean isConnected(Context context)
+	{
 		
 		ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
 		NetworkInfo netinfo = cm.getActiveNetworkInfo();
@@ -163,7 +211,8 @@ public class userType extends AppCompatActivity {
 	}
 	
 	
-	public AlertDialog.Builder buildDialog(Context c) {
+	public AlertDialog.Builder buildDialog(Context c)
+	{
 		
 		AlertDialog.Builder builder = new AlertDialog.Builder(c);
 		builder.setTitle("No Internet Connection");
@@ -181,7 +230,8 @@ public class userType extends AppCompatActivity {
 		return builder;
 	}
 	
-	public boolean havePermission() {
+	public boolean havePermission()
+	{
 		if (Build.VERSION.SDK_INT >= 23) {
 			if (checkSelfPermission(android.Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED && checkSelfPermission(android.Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
 				return true;
@@ -193,7 +243,8 @@ public class userType extends AppCompatActivity {
 			return true;
 		}
 	}
-	private void checkLocationPermission() {
+	private void checkLocationPermission()
+	{
 		if (ContextCompat.checkSelfPermission(this,
 				android.Manifest.permission.ACCESS_FINE_LOCATION) !=
 				PackageManager.PERMISSION_GRANTED) {
@@ -217,7 +268,8 @@ public class userType extends AppCompatActivity {
 	}
 	
 	@Override
-	public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+	public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
+	{
 		super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 		switch (requestCode) {
 			case 1: {
@@ -235,7 +287,8 @@ public class userType extends AppCompatActivity {
 	}
 	
 	
-	public void driverClick() {
+	public void driverClick()
+	{
 		
 		editor.putString("type", "driver"); // Storing string
 		editor.apply();
@@ -248,7 +301,8 @@ public class userType extends AppCompatActivity {
 		
 	}
 	
-	public void riderClick() {
+	public void riderClick()
+	{
 		
 		editor.putString("type", "rider"); // Storing string
 		editor.apply();
@@ -261,7 +315,8 @@ public class userType extends AppCompatActivity {
 	}
 	
 	
-	public void locationsetting() {
+	public void locationsetting()
+	{
 		LocationManager lm = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
 		boolean gps_enabled = false;
 		boolean network_enabled = false;

@@ -17,7 +17,7 @@ public class location_permission extends AppCompatActivity {
 	
 	public void getpermmsion(View view) {
 
-//		startActivity(new Intent(getApplicationContext(),CustomerMapActivity.this));
+//		startActivity(new Intent(getApplicationContext(),RiderMapActivity.this));
 		return;
 	}
 }

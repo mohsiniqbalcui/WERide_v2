@@ -30,14 +30,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20sp"
-                android:text="From - To" />
+                android:text="From -                                              To" />
 
             <TextView
                 android:id="@+id/rideDistance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20sp"
-                android:text="distance" />
+                android:text="distance"
+                />
 
             <TextView
                 android:id="@+id/rideDate"

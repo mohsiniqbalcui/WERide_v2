@@ -5,14 +5,35 @@
     android:layout_height="match_parent"
     tools:context="com.pool.Weride.HistoryActivity"
     android:fitsSystemWindows="true"
+    android:padding="16dp"
     android:orientation="vertical"
     android:id="@+id/layout">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:text="Balance"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"
+        android:textColor="@color/places_autocomplete_prediction_primary_text"
+        android:textSize="26sp"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Select package that works for you and save on your daily rides"
+        android:textColor="@color/places_autocomplete_prediction_primary_text_highlight"
+        android:layout_height="wrap_content">
+    </TextView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:orientation="vertical">
         <TextView
-            android:padding="20sp"
+            android:padding="13sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Balance: 0€"
@@ -32,6 +53,7 @@
             android:id="@+id/payout"/>
     </LinearLayout>
 
+
     <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -40,7 +62,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/historyRecyclerView"
-            android:scrollbars="vertical"></androidx.recyclerview.widget.RecyclerView>
+            android:scrollbars="vertical">
+
+        </androidx.recyclerview.widget.RecyclerView>
 
     </androidx.core.widget.NestedScrollView>
 

@@ -3,6 +3,7 @@ package com.pool.Weride;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -35,13 +36,14 @@ public class PhoneNumberActivity extends AppCompatActivity {
 			/* in case driver and rider both are already */
 //			if (verfied == "verify" && type == "driver") {
 			if (type.equals("driver")) {
-				
-				startActivity(new Intent(getApplicationContext(), DriverMapActivity.class));
+				Log.e("PhoneNumberActivity", "opening DriverMapActivity" );
+				startActivity(new Intent(getApplicationContext(), driver_nav_drawer.class));
 				finish();
 			}
 //			if (verfied == "verify" && type == "rider") {
 			if (type.equals("rider")) {
-				startActivity(new Intent(getApplicationContext(), CustomerMapActivity.class));
+				Log.d("PhoneNumberActivity", "opening RiderMapActivity ");
+				startActivity(new Intent(getApplicationContext(), rider_nav_layout.class));
 				finish();
 			}
 			

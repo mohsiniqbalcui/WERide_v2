@@ -87,7 +87,8 @@ public class HistoryActivity extends AppCompatActivity {
 	
 	private void getUserHistoryIds() {
 		DatabaseReference userHistoryDatabase = FirebaseDatabase.getInstance().getReference().child("Users").child(customerOrDriver).child(userId).child("history");
-		userHistoryDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
+		userHistoryDatabase.addListenerForSingleValueEvent(new ValueEventListener()
+		{
 			@Override
 			public void onDataChange(DataSnapshot dataSnapshot) {
 				if (dataSnapshot.exists()) {

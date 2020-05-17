@@ -1,55 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <group android:checkableBehavior="single">
 
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_home1"
             android:icon="@drawable/ic_home_black_24dp"
             android:title="Home" />
         <item
-            android:id="@+id/nav_rides"
+            android:id="@+id/nav_Driver_History"
             android:icon="@drawable/ic_my_rides"
             android:title="Driver History" />
+
         <item
-            android:id="@+id/nav_transaction"
+            android:id="@+id/nav_Driver_Wallet"
             android:icon="@drawable/ic_account_balance_wallet_black_24dp"
-            android:title="Wallet" />
+            android:title="Driver Wallet" />
 
+        <!--never open this-->
         <item
-            android:id="@+id/nav_Groups"
+            android:id="@+id/nav_Groups1"
             android:icon="@drawable/ic_group"
-            android:title="Groups" />
+            android:title="Driver Groups" />
         <item
-            android:id="@+id/nav_packages"
+            android:id="@+id/nav_packages1"
             android:icon="@drawable/location"
-            android:title="Packages" />
+            android:title="Driver Packages" />
+        <!--never open this-->
 
         <item
-            android:id="@+id/nav_settings"
+            android:id="@+id/nav_settings1"
             android:icon="@drawable/ic_menu_manage"
             android:title="Driver setting" />
     </group>
 
+    <!--never open this-->
 
     <item android:title="Communicate">
         <menu>
             <group android:checkableBehavior="single">
 
                 <item
-                    android:id="@+id/nav_help"
+                    android:id="@+id/nav_help1"
                     android:icon="@drawable/ic_feedback_black_24dp"
                     android:title="@string/help_support" />
                 <item
-                    android:id="@+id/nav_callSupport"
+                    android:id="@+id/nav_callSupport1"
                     android:icon="@drawable/ic_call_black_24dp"
                     android:title="@string/call_we_ride_support" />
                 <item
-                    android:id="@+id/nav_share"
+                    android:id="@+id/nav_share1"
                     android:icon="@drawable/ic_menu_share"
                     android:title="@string/refer_a_friends" />
                 <item
-                    android:id="@+id/nav_logout"
+                    android:id="@+id/nav_logout1"
                     android:icon="@drawable/ic_exit"
                     android:title="@string/log_out" />
             </group>
