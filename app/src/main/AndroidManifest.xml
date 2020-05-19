@@ -66,6 +66,7 @@
         <activity android:name=".signin_activity" />
         <activity android:name=".signup_activity" />
         <activity android:name=".userType" />
+        <activity android:name=".wallet"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").

@@ -24,13 +24,6 @@ import com.pool.Weride.historyRecyclerView.HistoryObject;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
-//import com.squareup.okhttp.Call;
-//import com.squareup.okhttp.Callback;
-//import com.squareup.okhttp.MediaType;
-//import com.squareup.okhttp.OkHttpClient;
-//import com.squareup.okhttp.RequestBody;
-//import com.squareup.okhttp.Response;
-
 
 public class HistoryActivity extends AppCompatActivity {
 	private String customerOrDriver, userId;
@@ -156,73 +149,3 @@ public class HistoryActivity extends AppCompatActivity {
 	
 }
 
-
-/*
-
-
-    public static final MediaType MEDIA_TYPE = MediaType.parse("application/json");
-    ProgressDialog progress;
-    private void payoutRequest() {
-        progress = new ProgressDialog(this);
-       
-        progress.setTitle("Processing your payout");
-        progress.setMessage("Please Wait...");
-        progress.setCancelable(true); // disable dismiss by tapping outside of the dialog
-        progress.show();
-
-        final OkHttpClient client = new OkHttpClient();
-        JSONObject postData = new JSONObject();
-        
-        try {
-            postData.put("uid", FirebaseAuth.getInstance().getCurrentUser().getUid());
-            postData.put("email", mPayoutEmail.getText());
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        
-        
-*//*
-        RequestBody body = RequestBody.create(MEDIA_TYPE,
-                postData.toString());
-
-        final Request request = new Request.Builder()
-                .url("https://us-central1-uberapp-408c8.cloudfunctions.net/payout")
-                .post(body)
-                .addHeader("Content-Type", "application/json")
-                .addHeader("Authorization", "Your Token")
-                .addHeader("cache-control", "no-cache")
-                .build();
-        client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                String mMessage = e.getMessage();
-                Log.w("failure Response", mMessage);
-                progress.dismiss();
-            }
-
-            @Override
-            public void onResponse(Call call, Response response)
-                    throws IOException {
-
-                int responseCode = response.code();
-
-
-                if (response.isSuccessful())
-                    switch (responseCode) {
-                        case 200:
-                            Snackbar.make(findViewById(R.id.layout), "Payout Successful!", Snackbar.LENGTH_LONG).show();
-                            break;
-                        case 501:
-                            Snackbar.make(findViewById(R.id.layout), "Error: no payout available", Snackbar.LENGTH_LONG).show();
-                            break;
-                        default:
-                            Snackbar.make(findViewById(R.id.layout), "Error: couldn't complete the transaction", Snackbar.LENGTH_LONG).show();
-                            break;
-                    }
-                else
-                    Snackbar.make(findViewById(R.id.layout), "Error: couldn't complete the transaction", Snackbar.LENGTH_LONG).show();
-
-                progress.dismiss();
-            }
-        });*//*
-    }*/

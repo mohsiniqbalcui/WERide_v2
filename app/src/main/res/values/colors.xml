@@ -12,6 +12,7 @@
     <color name="popupPrimary">#3f51b5</color>
     <color name="popupPrimaryDark">#2f333f</color>
 
+    <color name="upworkGreen">#37A000</color>
     <color name="green_text_color">#06C432</color>
     <color name="primary_dark">#388E3C</color>
     <color name="primary_light">#C8E6C9</color>
@@ -28,6 +29,9 @@
     <color name="mtrl_textinput_default_box_stroke_color" xmlns:tools="http://schemas.android.com/tools" tools:override="true">
         #3F51B5
     </color>
+
+    <color name="grey">#b1afb6</color>
+    <color name="font">#808080</color>
     <color name="strokecolor">#3F51B5</color>
 
     <color name="backgroundcolor">#fcfcfc</color>
