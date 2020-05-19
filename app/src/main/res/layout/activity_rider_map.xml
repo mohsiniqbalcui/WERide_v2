@@ -157,12 +157,15 @@
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_gravity="center|left"
-        android:foregroundGravity="center|fill"
-        android:visibility="visible"
-        android:src="@drawable/exitbutton" />
+        android:padding="5dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_hospital"
+        />
 
 </FrameLayout>
 

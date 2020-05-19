@@ -18,7 +18,7 @@
         android:id="@+id/textView6"
         android:layout_width="102sp"
         android:layout_height="51sp"
-        android:layout_marginTop="25sp"
+        android:layout_marginTop="45sp"
         android:layout_marginEnd="20sp"
         android:layout_marginBottom="200sp"
         android:gravity="center_horizontal"
@@ -50,18 +50,17 @@
             android:id="@+id/riderUser"
             android:layout_width="206sp"
             android:layout_height="190sp"
-            android:layout_gravity="center_vertical"
+            android:scaleType="fitCenter"
             android:background="@drawable/rider">
-
 
         </Button>
 
         <Button
             style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
             android:id="@+id/driverUser"
-            android:layout_width="179sp"
-            android:layout_height="180sp"
-            android:layout_gravity="center_vertical"
+            android:layout_width="170sp"
+            android:layout_height="190sp"
+            android:scaleType="fitCenter"
             android:layout_marginEnd="0sp"
             android:background="@drawable/driver">
 
@@ -110,7 +109,7 @@
         android:id="@+id/textView5"
         android:layout_width="108sp"
         android:layout_height="50sp"
-        android:layout_marginTop="25sp"
+        android:layout_marginTop="45sp"
         android:layout_marginEnd="89sp"
         android:layout_marginBottom="200sp"
         android:gravity="center_horizontal"

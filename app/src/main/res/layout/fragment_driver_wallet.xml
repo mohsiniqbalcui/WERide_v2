@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
-    android:background="#fcfcfc"
+    android:background="@color/background"
     android:gravity="center"
     android:id="@+id/ll">
 
@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Banking"/>
+                    android:text="Earning"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -50,6 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
+                    android:id="@+id/tv_earning"
                     android:text="Check your bank activities"
                     android:padding="5dp"
                     android:textColor="@android:color/darker_gray"/>

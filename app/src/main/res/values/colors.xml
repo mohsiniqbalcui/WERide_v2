@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!--
     <color name="colorPrimary">#4CAF50</color>
+-->
+    <color name="colorPrimary1">#4CAF50</color>
+
+    <color name="colorPrimary">#388E3C</color>
     <color name="colorPrimaryDark">#388E3C</color>
     <color name="colorAccent">#4CAF50</color>
 
+    <color name="popupPrimary">#3f51b5</color>
+    <color name="popupPrimaryDark">#2f333f</color>
 
+    <color name="green_text_color">#06C432</color>
     <color name="primary_dark">#388E3C</color>
     <color name="primary_light">#C8E6C9</color>
     <color name="accent">#85DA47</color>
+    <color name="attractive">#0DA974</color>
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#757575</color>
     <color name="icons">#FFFFFF</color>
@@ -25,12 +34,30 @@
     <color name="lightgray">#ededed</color>
     <color name="deeppurple">#7c4dff</color>
     <color name="yello">#ffb300</color>
-    <color name="green">#00bfa5</color>
+    <color name="Caribbean_Green">#00bfa5</color>
     <color name="colorAccent1">#FF4081</color>
     <color name="darkblue">#23283a</color>
     <color name="testcolorblue">#152b38</color>
     <color name="pink">#fe104d</color>
 
     <color name="black_overlay">#66000000</color>
+
+
+    <color name="gradient_start_color">#4c84ff</color>
+    <color name="gradient_end_color">#18a3fe</color>
+
+
+    <!-- colors for tab and screent text -->
+
+    <color name="tab_indicator_gray">#c0c0c0</color>
+    <color name="intro_title_color">#000000</color>
+    <color name="intro_description_color">#656565</color>
+
+    <color name="bluedark">#2f333f</color>
+    <color name="bluelight">#49acd5</color>
+    <color name="orange">#eaad43</color>
+    <color name="green">#45bc62</color>
+    <color name="white">#FFFEFE</color>
+
 
 </resources>

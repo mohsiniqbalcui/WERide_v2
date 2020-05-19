@@ -179,7 +179,7 @@ public class DriverSettingsActivity extends AppCompatActivity {
 		mDriverDatabase.updateChildren(userInfo);
 
         if(resultUri != null) {
-// only called if user profile image is uploaded
+// only called if user profile image is uploaded12
             StorageReference filePath = FirebaseStorage.getInstance().getReference().child("profile_images").child(userID);
             Bitmap bitmap = null;
             try {

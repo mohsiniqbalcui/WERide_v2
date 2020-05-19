@@ -57,11 +57,11 @@
         </activity>
         <activity android:name=".location_permission" />
         <activity android:name=".splash">
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <activity android:name=".signin_activity" />
         <activity android:name=".signup_activity" />
@@ -99,14 +99,24 @@
         <activity android:name=".HistoryActivity" />
         <activity android:name=".HistorySingleActivity">
 
-            <!--
+<!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            -->
+-->
         </activity>
+
+        <activity android:name=".IntroActivity">
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

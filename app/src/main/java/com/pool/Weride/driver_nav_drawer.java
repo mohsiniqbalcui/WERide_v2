@@ -32,7 +32,6 @@ public class driver_nav_drawer extends AppCompatActivity implements NavigationVi
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
 		setContentView(R.layout.activity_drawer_driver_layout);
 		
 		Toolbar toolbar = findViewById(R.id.driver_toolbar);

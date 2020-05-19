@@ -3,12 +3,15 @@ package com.pool.Weride;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.location.Location;
 import android.os.Build;
 import android.os.Bundle;
@@ -89,8 +92,9 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
     private ImageView mCustomerProfileImage;
     private TextView mCustomerName, mCustomerPhone, mCustomerDestination;
 	private FirebaseAnalytics mFirebaseAnalytics;
-	
-	@Override
+    Dialog myDialog;
+    
+    @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
@@ -100,8 +104,9 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
    
 		mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         polylines = new ArrayList<>();
-        
-    InitializeVariables();
+            myDialog = new Dialog(this);
+    
+            InitializeVariables();
     
         getAssignedCustomer();
         }catch (Exception pE){
@@ -228,7 +233,25 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
             }
         });
     }
-
+    
+    public void ShowPopup(View v) {
+        TextView txtclose;
+        Button btnFollow;
+        myDialog.setContentView(R.layout.custompopup);
+        
+        txtclose =(TextView) myDialog.findViewById(R.id.txtclose);
+        txtclose.setText("M");
+        btnFollow = (Button) myDialog.findViewById(R.id.btnfollow);
+        
+        txtclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
+    }
     Marker pickupMarker;
     private DatabaseReference assignedCustomerPickupLocationRef;
     private ValueEventListener assignedCustomerPickupLocationRefListener;
@@ -599,4 +622,6 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
 		System.exit(0);
 		
 	}
+	
+	
 }// class
