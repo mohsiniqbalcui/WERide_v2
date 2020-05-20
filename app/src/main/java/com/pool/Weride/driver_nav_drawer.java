@@ -17,7 +17,6 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.pool.Weride.fragments.helpSupport;
-import com.pool.Weride.fragments.transactionFragment;
 
 
 public class driver_nav_drawer extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -75,8 +74,8 @@ public class driver_nav_drawer extends AppCompatActivity implements NavigationVi
 				Toast.makeText(this, "Driver History", Toast.LENGTH_SHORT).show();
 				break;
 			case R.id.nav_Driver_Wallet:// earning
-				getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-						new transactionFragment()).commit();
+				startActivity(new Intent(driver_nav_drawer.this,wallet.class));
+				navigationView.setCheckedItem(R.id.nav_Driver_History);
 				
 				Toast.makeText(this, "Driver Wallet", Toast.LENGTH_SHORT).show();
 				break;

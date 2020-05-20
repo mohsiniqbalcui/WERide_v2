@@ -1,6 +1,7 @@
 package com.pool.Weride;
 
 import android.Manifest;
+import android.Manifest.permission;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -61,6 +62,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -101,8 +107,27 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
         try {
         setContentView(R.layout.activity_driver_map);
 			// Obtain the SupportMapFragment and get notified when the map is ready to be used.
-   
-		mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+    
+            Dexter.withContext(this)
+                    .withPermissions(
+                            Manifest.permission.ACCESS_FINE_LOCATION,
+                            Manifest.permission.CAMERA,
+                            permission.ACCESS_NETWORK_STATE,
+                            permission.ACCESS_WIFI_STATE,
+                            Manifest.permission.CALL_PHONE)
+                    .withListener(new MultiplePermissionsListener() {
+                        @Override
+                        public void onPermissionsChecked(final MultiplePermissionsReport pMultiplePermissionsReport) {
+                    
+                        }
+                
+                        @Override
+                        public void onPermissionRationaleShouldBeShown(final List<PermissionRequest> pList, final PermissionToken pPermissionToken) {
+                    
+                        }
+                    }).check();
+    
+            mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
         polylines = new ArrayList<>();
             myDialog = new Dialog(this);
     

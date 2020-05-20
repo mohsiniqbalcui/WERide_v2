@@ -7,9 +7,9 @@
              android:bottomRightRadius="12dp"/>
 
     <gradient
-            android:startColor="#796DEB"
+            android:startColor="@color/upworkGreen"
             android:type="linear"
-            android:centerColor="#AB8BEE"
-            android:endColor="#A484F3"
+            android:centerColor="#41A10E"
+            android:endColor="#0FA115"
             android:angle="45"/>
 </shape>

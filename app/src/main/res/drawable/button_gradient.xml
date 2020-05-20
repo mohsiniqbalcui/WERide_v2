@@ -10,6 +10,6 @@
         android:topLeftRadius="100dp" />
     <gradient
         android:startColor="#0B952C"
-        android:endColor="@color/accent"
+        android:endColor="@color/upworkGreen"
         android:angle="0" />
 </shape>
