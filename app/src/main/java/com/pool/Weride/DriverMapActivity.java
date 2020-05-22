@@ -143,7 +143,6 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
     private void InitializeVariables() {
     
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
-    
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map11);
         mapFragment.getMapAsync(this);
     
@@ -170,10 +169,7 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
             }
         });
     
-        mSettings = findViewById(R.id.settings);
-        mLogout = findViewById(R.id.logout);
         mRideStatus = findViewById(R.id.rideStatus);
-        mHistory = findViewById(R.id.history);
     
         mRideStatus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -209,14 +205,6 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
                 Intent intent = new Intent(DriverMapActivity.this, userType.class);
                 startActivity(intent);
                 finish();
-            }
-        });
-    
-        mSettings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(DriverMapActivity.this, DriverSettingsActivity.class);
-                startActivity(intent);
             }
         });
     

@@ -97,8 +97,7 @@
                     android:layout_width="match_parent"
                     android:layout_below="@id/money"
                     android:background="#796DEB"
-                    android:layout_height="1dp"
-            />
+                    android:layout_height="1dp" />
         </RelativeLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout

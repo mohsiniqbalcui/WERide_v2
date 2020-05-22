@@ -8,6 +8,15 @@
     android:orientation="vertical"
     android:padding="20sp">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/driver_toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="2dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:title="   Rider Profile" />
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -21,17 +30,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-                android:layout_marginTop="5dp"
-                android:text="Profile Setting"
-                android:layout_gravity="center_horizontal"
-                android:textSize="25sp">
-
-            </TextView>
 
             <ImageView
 
@@ -82,6 +80,57 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
+
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/genderradioGroup"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Male  "
+                    android:checked="true"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/male" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Female "
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/female" />
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_below="@id/money"
+                android:background="#796DEB"
+                android:layout_marginTop="19dp"
+                android:layout_height="1dp" />
+
+            <RadioGroup
+                android:layout_marginTop="19dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ridesharingrradioGroup"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ride Sharing"
+                    android:checked="true"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/ridesharing" />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Private Ride "
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/PrivateRide" />
+            </RadioGroup>
 
             <Button
                 android:layout_marginTop="20dp"

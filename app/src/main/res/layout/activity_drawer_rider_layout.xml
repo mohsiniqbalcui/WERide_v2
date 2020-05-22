@@ -23,7 +23,8 @@
             app:title="@string/rider"
             android:elevation="0dp"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            />
         <!--fragment container this container will contain every fragment home-->
         <FrameLayout
             android:id="@+id/fragment_container"

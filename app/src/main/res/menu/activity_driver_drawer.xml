@@ -16,15 +16,7 @@
             android:icon="@drawable/ic_account_balance_wallet_black_24dp"
             android:title="Driver Wallet" />
 
-        <!--never open this-->
-        <item
-            android:id="@+id/nav_Groups1"
-            android:icon="@drawable/ic_group"
-            android:title="Driver Groups" />
-        <item
-            android:id="@+id/nav_packages1"
-            android:icon="@drawable/location"
-            android:title="Driver Packages" />
+
         <!--never open this-->
 
         <item

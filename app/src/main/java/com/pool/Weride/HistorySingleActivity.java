@@ -75,6 +75,9 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history_single);
         
+        getSupportActionBar().setTitle("Single ride History");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        
 		try {
         polylines = new ArrayList<>();
         rideId = getIntent().getExtras().getString("rideId");

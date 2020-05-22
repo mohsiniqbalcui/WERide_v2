@@ -62,7 +62,7 @@
     <string name="confirm_otp">confirm OTP</string>
     <string name="spinner_title">select category</string>
     <string name="get_started">Get Started</string>
-    <string name="driver">Driver</string>
+    <string name="driver"> Driver</string>
     <string name="choose_a_rider_or_driver_position">Choose a Rider or Driver Position</string>
-    <string name="rider">Rider</string>
+    <string name="rider">  Rider</string>
 </resources>
