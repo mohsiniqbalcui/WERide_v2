@@ -75,7 +75,7 @@ public class HistorySingleActivity extends AppCompatActivity implements OnMapRea
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history_single);
         
-        getSupportActionBar().setTitle("Single ride History");
+        getSupportActionBar().setTitle("Ride History");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         
 		try {

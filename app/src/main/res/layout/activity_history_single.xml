@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView
-
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,10 +8,14 @@
     tools:context="com.pool.Weride.HistorySingleActivity">
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <include
+            layout="@layout/tool_bar">
+        </include>
         <fragment
             android:id="@+id/map1"
             android:name="com.google.android.gms.maps.SupportMapFragment"
@@ -89,7 +92,7 @@
             android:layout_gravity="center"
             android:numStars="5"
             android:stepSize="1"
-            android:visibility="gone" />
+           />
 
         <Button
             android:id="@+id/pay"
@@ -97,7 +100,7 @@
             android:layout_height="wrap_content"
             android:enabled="false"
             android:text="Pay Here"
-            android:visibility="gone" />
+            />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

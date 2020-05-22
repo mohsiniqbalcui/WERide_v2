@@ -58,6 +58,8 @@ public class RiderSettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rider_settings);
     
+        getSupportActionBar().setTitle("Rider Setting");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     
         mNameField = findViewById(R.id.name1);
         mPhoneField = findViewById(R.id.phonec);

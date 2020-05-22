@@ -66,7 +66,8 @@
         <activity android:name=".signin_activity" />
         <activity android:name=".signup_activity" />
         <activity android:name=".userType" />
-        <activity android:name=".wallet"></activity>
+        <activity android:name=".wallet"
+            android:parentActivityName=""></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -85,17 +86,19 @@
 
         <activity
             android:name=".DriverMapActivity"
-            android:label="@string/title_activity_driver_map" />
+            android:parentActivityName=".driver_nav_drawer" />
         <activity
             android:name=".rider_nav_layout"
-            android:label="Rider" />
+            android:label="" />
         <activity
             android:name=".driver_nav_drawer"
             android:label="Rider" />
         <activity android:name=".verifyPhoneActivity" />
         <activity android:name=".PhoneNumberActivity" />
-        <activity android:name=".RiderMapActivity" />
-        <activity android:name=".RiderSettingsActivity"></activity>
+        <activity android:name=".RiderMapActivity"
+            android:parentActivityName=".rider_nav_layout"/>
+        <activity android:name=".RiderSettingsActivity"
+            android:parentActivityName=".rider_nav_layout"></activity>
         <activity android:name=".DriverSettingsActivity" />
         <activity android:name=".HistoryActivity" />
         <activity android:name=".HistorySingleActivity">

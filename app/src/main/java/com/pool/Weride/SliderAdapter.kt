@@ -20,7 +20,6 @@ class SliderAdapter(private val context: Context, private val imagelist: List<St
 
     }
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(parent.context)
             .inflate(R.layout.horizontal_item, parent, false)
