@@ -37,8 +37,7 @@ public class rider_nav_layout extends AppCompatActivity implements NavigationVie
 		 navigationView = findViewById(R.id.nav_view);
 		navigationView.setNavigationItemSelectedListener(this);
 		
-		ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
-				R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+		ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 		drawer.addDrawerListener(toggle);
 		
 		toggle.syncState();
@@ -47,6 +46,7 @@ public class rider_nav_layout extends AppCompatActivity implements NavigationVie
 			
 			startActivity(new Intent(rider_nav_layout.this, RiderMapActivity.class));
 			navigationView.setCheckedItem(R.id.nav_home);
+			
 		}
 		
 		mSharedPreferences1 = getSharedPreferences("type", MODE_PRIVATE);
@@ -57,10 +57,8 @@ public class rider_nav_layout extends AppCompatActivity implements NavigationVie
 	@Override
 	public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 		
-		
 		switch (item.getItemId()) {
 			case R.id.nav_home:
-				
 				startActivity(new Intent(rider_nav_layout.this, RiderMapActivity.class));
 				navigationView.setCheckedItem(R.id.nav_home);
 				Toast.makeText(this, "customer map activity is opened", Toast.LENGTH_SHORT).show();
@@ -74,7 +72,6 @@ public class rider_nav_layout extends AppCompatActivity implements NavigationVie
 			case R.id.nav_transaction:
 				startActivity(new Intent(rider_nav_layout.this, HistoryActivity.class));
 				navigationView.setCheckedItem(R.id.nav_home);
-				
 				Toast.makeText(this, "rides history", Toast.LENGTH_SHORT).show();
 				break;
 			case R.id.nav_share:

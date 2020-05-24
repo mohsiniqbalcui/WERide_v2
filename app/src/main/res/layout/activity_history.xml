@@ -53,7 +53,12 @@
             android:id="@+id/payout"/>
     </LinearLayout>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:text="rides "
+        android:layout_height="wrap_content">
 
+    </TextView>
     <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">

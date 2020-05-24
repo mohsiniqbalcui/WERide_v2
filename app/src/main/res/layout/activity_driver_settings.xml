@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.pool.Weride.RiderSettingsActivity"
     android:orientation="vertical"
-    android:padding="20sp">
+    >
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/driver_toolbar2"
@@ -16,7 +16,8 @@
         android:elevation="2dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:title="   Driver Profile" />
+        app:title="   Driver Profile"
+        />
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -14,7 +14,9 @@
         android:orientation="vertical">
 
         <include
-            layout="@layout/tool_bar">
+            layout="@layout/tool_bar"
+
+            >
         </include>
         <fragment
             android:id="@+id/map1"

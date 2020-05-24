@@ -14,6 +14,7 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
+<!--
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,24 +28,10 @@
                 android:id="@+id/logout1"
                 android:text="logout" />
 
-            <Button
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/history1"
-                android:text="history" />
-
-            <Button
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/settings1"
-                android:text="Settings" />
-
         </LinearLayout>
+-->
 
         <androidx.cardview.widget.CardView
-            android:layout_below="@+id/buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="20sp">
@@ -138,7 +125,7 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="  Rick Shaw "
+                    android:text="    Rick Shaw "
                     android:layout_marginRight="20dp"
                     android:drawableLeft="@drawable/rickshaw"
                     android:id="@+id/RickShaw" />

@@ -7,9 +7,6 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -190,7 +187,7 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
                 }
             }
         });
-    
+    /*
         SharedPreferences mSharedPreferences1 = getSharedPreferences("type", MODE_PRIVATE);
         final Editor type = mSharedPreferences1.edit();
     
@@ -216,7 +213,7 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
                 startActivity(intent);
                 return;
             }
-        });
+        });*/
     
     }
     
@@ -433,8 +430,8 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
         mMap = googleMap;
         
         mLocationRequest = new LocationRequest();
-		mLocationRequest.setInterval(30000);
-		mLocationRequest.setFastestInterval(15000);
+		mLocationRequest.setInterval(60000);
+		mLocationRequest.setFastestInterval(30000);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         
         if(android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){

@@ -289,7 +289,7 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:elevation="0dp"
+            app:elevation="5dp"
             android:background="@color/white"
             app:itemTextColor="@drawable/bottom_navi_item"
             app:itemIconTint="@drawable/bottom_navi_item"

@@ -11,6 +11,9 @@
     android:gravity="center"
     android:id="@+id/ll">
 
+    <include >
+
+    </include>
     <LinearLayout
         android:clipToPadding="false"
         android:gravity="center"
@@ -81,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Ideas"/>
+                    android:text="Contribute"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -127,7 +130,7 @@
                     android:layout_height="wrap_content"
                     android:textStyle="bold"
                     android:layout_marginTop="10dp"
-                    android:text="Add"/>
+                    android:text="Add Payment"/>
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
@@ -167,7 +170,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:text="Links"
+                    android:text="use Links"
                     android:textStyle="bold" />
 
                 <View

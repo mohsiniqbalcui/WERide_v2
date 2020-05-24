@@ -50,7 +50,6 @@
          </LinearLayout>
 
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,7 +57,7 @@
         android:layout_gravity="bottom"
         android:orientation="vertical"
         android:background="@android:color/white"
-        android:visibility="invisible"
+        android:visibility="visible"
         android:elevation="1dp"
         android:translationZ="1dp">
 

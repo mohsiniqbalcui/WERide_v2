@@ -41,7 +41,6 @@ import com.firebase.geofire.GeoQueryEventListener;
 import com.google.android.gms.common.api.Status;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
-import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
@@ -84,7 +83,7 @@ import com.google.android.libraries.places.api.Places;
 import com.google.android.gms.location.places.ui.PlaceSelectionListener;*/
 
 
-public class RiderMapActivity extends FragmentActivity implements OnMapReadyCallback, LocationListener {
+public class RiderMapActivity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
     Location mLastLocation;
@@ -93,7 +92,7 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
 
     private FusedLocationProviderClient mFusedLocationClient;
 
-    private Button mLogout, mRequest, mSettings, mHistory;
+    private Button  mRequest;
 //customer current location that is pick up location
     private LatLng pickupLocation;
 
@@ -219,10 +218,7 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
 		mRatingBar = findViewById(R.id.ratingBar1);
 		mRadioGroup = findViewById(R.id.radioGroup1);
 		
-		mLogout = findViewById(R.id.logout1);
 		mRequest = findViewById(R.id.callride);
-		mSettings = findViewById(R.id.settings1);
-		mHistory = findViewById(R.id.history1);
 		/*
 		 * ============offline
 		 * 						FirebaseDatabase.getInstance().setPersistenceEnabled(true);
@@ -232,16 +228,17 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
 		
 		mSharedPreferences1 = getSharedPreferences("type", MODE_PRIVATE);
 		type = mSharedPreferences1.edit();
-		mLogout.setOnClickListener(new View.OnClickListener() {
+		/*mLogout.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
+				
 				FirebaseAuth.getInstance().signOut();
 				Intent intent = new Intent(RiderMapActivity.this, userType.class);
 				type.clear();
 				startActivity(intent);
 				finish();
 			}
-		});
+		});*/
 		
 		
 		imageCall.setOnClickListener(new View.OnClickListener() {
@@ -264,27 +261,8 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
 			}
 		});
 		
-		mSettings.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(RiderMapActivity.this, RiderSettingsActivity.class);
-				startActivity(intent);
-				
-			}
-		});
-		
-		mHistory.setOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				Intent intent = new Intent(RiderMapActivity.this, HistoryActivity.class);
-				intent.putExtra("customerOrDriver", "Customers");
-				startActivity(intent);
-				
-			}
-		});
+	
 	}
-	
-	
 	
 	
 	
@@ -315,6 +293,12 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
 			
 			
 			DatabaseReference ref = FirebaseDatabase.getInstance().getReference("customerRequest");
+			if (ref.getKey()!=null){
+			
+			}else{
+				Toast.makeText(this, "customerRquest not triggered in database",
+						Toast.LENGTH_SHORT).show();
+			}
 			
 			GeoFire geoFire = new GeoFire(ref);
 			
@@ -721,15 +705,7 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
 	//=====================================called on start===============================================================================================
    
    
-   
-   
-   
-   
-   
-   
-   
-   
-   
+	
     @Override
     public void onMapReady(GoogleMap googleMap)
 	{
@@ -744,12 +720,12 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
         }
 	
 		mLocationRequest = LocationRequest.create(); // new keyword removed and .create added due to current playservices api >12
-		mLocationRequest.setInterval(30000); //10 sec
-		mLocationRequest.setFastestInterval(15000);
+		mLocationRequest.setInterval(60000); //10 sec
+		mLocationRequest.setFastestInterval(30000);
 		mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
 	
-		/*mMap.getUiSettings().setZoomControlsEnabled(true);
-		mMap.getUiSettings().setMyLocationButtonEnabled(true);*/
+		mMap.getUiSettings().setZoomControlsEnabled(true);
+		mMap.getUiSettings().setMyLocationButtonEnabled(true);
 		
         mFusedLocationClient.requestLocationUpdates(mLocationRequest, mLocationCallback, Looper.myLooper());
         mMap.setMyLocationEnabled(true);
@@ -781,16 +757,20 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
                         getDriversAround();
 				
 					} catch (Exception mException) {
+						Toast.makeText(RiderMapActivity.this, ""+mException.getLocalizedMessage(),
+								Toast.LENGTH_SHORT).show();
+						
+						Toast.makeText(RiderMapActivity.this, ""+mException.getCause(),
+								Toast.LENGTH_SHORT).show();
+						Log.e(TAG, "onLocationResult: "+mException.getLocalizedMessage()+mException.getCause() );
 						mException.printStackTrace();
 					}
 				}
 			}
 		}
 		
-		
 	};
-
-
+ 
 	
 	/*
 	 * deal with with all permission related features dont see this
@@ -798,8 +778,6 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
 	 * */
 	
 	//=============================permissiosn===========================================================================================================
-	
-	
 	
 	
 	
@@ -947,8 +925,7 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
 						.position(driverLocation).title(key).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_car)));
                 mDriverMarker.setTag(key);
                 markers.add(mDriverMarker);
-
-
+                
             }
 
             @Override
@@ -980,7 +957,8 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
 
             @Override
             public void onGeoQueryError(DatabaseError error) {
-				Toast.makeText(RiderMapActivity.this, "problem in driver location query", Toast.LENGTH_LONG).show();
+				Toast.makeText(RiderMapActivity.this, ""+error.getMessage(),
+						Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -990,7 +968,6 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
 	@Override
 	protected void onStop() {
 		super.onStop();
-		System.exit(0);
 	}
 	
 	int REQUEST_CALL = 2;
@@ -1071,18 +1048,13 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
 				.setPositiveButton(android.R.string.yes, new OnClickListener() {
 					
 					public void onClick(DialogInterface arg0, int arg1) {
-//						RiderMapActivity.super.onBackPressed();
+						RiderMapActivity.super.onBackPressed();
 						finish();
-						System.exit(0);
+					//	System.exit(0);
 					}
 				}).create().show();
 	}
 	
-	@Override
-	public void onLocationChanged(final Location pLocation) {
-	
-	
-	}
 	
 	
 	
