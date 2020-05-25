@@ -50,11 +50,9 @@ public class driver_nav_drawer extends AppCompatActivity implements NavigationVi
 		if (savedInstanceState == null) {
 			startActivity(new Intent(driver_nav_drawer.this,DriverMapActivity.class));
 			navigationView.setCheckedItem(R.id.nav_home1);
-			
 		}
 		mSharedPreferences1 = getSharedPreferences("type", MODE_PRIVATE);
 		type = mSharedPreferences1.edit();
-		
 	}
 	
 	@Override
@@ -66,7 +64,6 @@ public class driver_nav_drawer extends AppCompatActivity implements NavigationVi
 			case R.id.nav_home1:
 				startActivity(new Intent(driver_nav_drawer.this,DriverMapActivity.class));
 				navigationView.setCheckedItem(R.id.nav_home1);
-				
 				Toast.makeText(this, "Message fragment", Toast.LENGTH_SHORT).show();
 				break;
 				

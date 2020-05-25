@@ -31,7 +31,7 @@ public class rider_nav_layout extends AppCompatActivity implements NavigationVie
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_drawer_rider_layout);
 		
-		Toolbar toolbar = findViewById(R.id.toolbar);
+		Toolbar toolbar = findViewById(R.id.toolbar11);
 		setSupportActionBar(toolbar);
 		
 		drawer = findViewById(R.id.drawer_layout);
@@ -76,7 +76,6 @@ public class rider_nav_layout extends AppCompatActivity implements NavigationVie
 				Toast.makeText(this, "rides history", Toast.LENGTH_SHORT).show();
 				break;
 			case R.id.nav_share:
-				
 				shareAppLink();
 				navigationView.setCheckedItem(R.id.nav_share);
 				Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();

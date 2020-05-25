@@ -25,9 +25,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.fragment.app.FragmentActivity;
 
 import com.bumptech.glide.Glide;
 import com.directions.route.AbstractRouting;
@@ -70,7 +70,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class DriverMapActivity extends FragmentActivity implements OnMapReadyCallback, RoutingListener
+public class DriverMapActivity extends AppCompatActivity implements OnMapReadyCallback, RoutingListener
 {
 
     private GoogleMap mMap;
@@ -104,9 +104,11 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
         try {
         setContentView(R.layout.activity_driver_map);
 			// Obtain the SupportMapFragment and get notified when the map is ready to be used.
-    getActionBar().setTitle("Driver Map");
-    getActionBar().setDisplayHomeAsUpEnabled(true);
     
+			
+            getActionBar().setTitle("Groups History");
+            getActionBar().setDisplayHomeAsUpEnabled(true);
+            
             Dexter.withContext(this)
                     .withPermissions(
                             Manifest.permission.ACCESS_FINE_LOCATION,
@@ -433,7 +435,7 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
         
         mLocationRequest = new LocationRequest();
 		mLocationRequest.setInterval(60000);
-		mLocationRequest.setFastestInterval(30000);
+		mLocationRequest.setFastestInterval(15000);
         mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
         
         if(android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M){
@@ -451,7 +453,7 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
         public void onLocationResult(LocationResult locationResult) {
             for(Location location : locationResult.getLocations()){
                 if(getApplicationContext()!=null){
-
+                    
                     if(!customerId.equals("") && mLastLocation!=null && location != null){
                         rideDistance += mLastLocation.distanceTo(location)/1000;
                     }

@@ -24,14 +24,15 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Rider_Groups" android:parentActivityName=".rider_nav_layout"></activity>
-<!--
-
+        <activity android:name=".Main2Activity"></activity>
+        <activity
+            android:name=".Rider_Groups"
+            android:parentActivityName=".rider_nav_layout" />
+        <!--
         <meta-data
             android:name="firebase_performance_logcat_enabled"
             android:value="true" />
--->
-
+        -->
         <activity
             android:name=".property_details"
             android:label="details">
@@ -59,17 +60,21 @@
         </activity>
         <activity android:name=".location_permission" />
         <activity android:name=".splash">
-            <!--<intent-filter>
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
         <activity android:name=".signin_activity" />
         <activity android:name=".signup_activity" />
         <activity android:name=".userType" />
-        <activity android:name=".wallet"
-            android:parentActivityName=".driver_nav_drawer"></activity>
+        <activity
+            android:name=".wallet"
+            android:parentActivityName=".driver_nav_drawer" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -81,7 +86,6 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
-
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
@@ -97,33 +101,33 @@
             android:label="Driver" />
         <activity android:name=".verifyPhoneActivity" />
         <activity android:name=".PhoneNumberActivity" />
-        <activity android:name=".RiderMapActivity"
-            android:parentActivityName=".rider_nav_layout"/>
-        <activity android:name=".RiderSettingsActivity"
-            android:parentActivityName=".rider_nav_layout"></activity>
-        <activity android:name=".DriverSettingsActivity"
-            android:parentActivityName=".driver_nav_drawer"/>
+        <activity
+            android:name=".RiderMapActivity"
+            android:parentActivityName=".rider_nav_layout" />
+        <activity
+            android:name=".RiderSettingsActivity"
+            android:parentActivityName=".rider_nav_layout" />
+        <activity
+            android:name=".DriverSettingsActivity"
+            android:parentActivityName=".driver_nav_drawer" />
         <activity android:name=".HistoryActivity" />
         <activity android:name=".HistorySingleActivity">
 
-<!--
+            <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
--->
+            -->
         </activity>
-
         <activity android:name=".IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

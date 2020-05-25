@@ -17,6 +17,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Looper;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -29,6 +30,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentActivity;
@@ -70,7 +72,6 @@ import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -127,10 +128,11 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
     protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_rider_map);
-	
-		getActionBar().setTitle("Rider Map");
-		getActionBar().setDisplayHomeAsUpEnabled(true);
-	
+		
+		
+		Toolbar appbar =  findViewById(R.id.toolbar11);
+  
+		
 		try {
 		buttonsCall();
 		
@@ -193,6 +195,11 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
 	
 	
 	
+	public boolean onOptionsItemSelected(MenuItem item){
+		Intent myIntent = new Intent(getApplicationContext(), rider_nav_layout.class);
+		startActivityForResult(myIntent, 0);
+		return true;
+	}
 	
 	
 	
@@ -1002,10 +1009,6 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
 	}
 	
 	int REQUEST_Support_CALL = 3;
-	
-	
-	
-	
 	
 	
 	
