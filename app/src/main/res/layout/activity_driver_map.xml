@@ -6,7 +6,6 @@
     tools:context="com.pool.Weride.DriverMapActivity">
 
 
-
     <fragment
         android:id="@+id/map11"
         android:name="com.google.android.gms.maps.SupportMapFragment"
@@ -23,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/colorPrimary"
-            app:title="@string/rider"
+            app:title="Driver"
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
         <LinearLayout
@@ -37,14 +36,12 @@
                 android:id="@+id/workingSwitch"/>
 
             <Switch
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="120dp"
                 android:layout_marginVertical="10dp"
                 android:text=" Ride Sharing "
                 android:id="@+id/rideShare"/>
-
 
         </LinearLayout>
          </LinearLayout>
@@ -104,7 +101,6 @@
             android:layout_height="wrap_content"
             android:text="picked customer"
             android:id="@+id/rideStatus"/>
-
 
     </LinearLayout>
 </FrameLayout>

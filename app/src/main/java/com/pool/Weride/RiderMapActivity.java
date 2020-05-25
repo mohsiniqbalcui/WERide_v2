@@ -90,6 +90,7 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
     LocationRequest mLocationRequest;
     String TAG="RiderMapActivity.this";
 
+    
     private FusedLocationProviderClient mFusedLocationClient;
 
     private Button  mRequest;
@@ -127,11 +128,12 @@ public class RiderMapActivity extends FragmentActivity implements OnMapReadyCall
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_rider_map);
 	
-		try {
+		getActionBar().setTitle("Rider Map");
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 	
+		try {
 		buttonsCall();
-			
-			
+		
 			Dexter.withContext(this)
 					.withPermissions(
 							Manifest.permission.ACCESS_FINE_LOCATION,

@@ -4,7 +4,6 @@ package com.pool.Weride;
 import android.Manifest;
 import android.Manifest.permission;
 import android.app.AlertDialog;
-import android.content.ContentProviderOperation.Builder;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -187,8 +186,10 @@ public class userType extends AppCompatActivity {
 				Toast.makeText(this, "shared Preference storage", Toast.LENGTH_SHORT).show();
 			}
 			
-			startActivity(new Intent(userType.this, RiderMapActivity.class));
-			finish();
+			/*
+			// by default open this activity
+			startActivity(new Intent(userType.this, rider_nav_layout.class));
+			finish();*/
 		}
 		
 	}
@@ -256,7 +257,8 @@ public class userType extends AppCompatActivity {
 						.setPositiveButton("OK", new DialogInterface.OnClickListener() {
 							@Override
 							public void onClick(DialogInterface dialogInterface, int i) {
-								ActivityCompat.requestPermissions(userType.this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+								ActivityCompat.requestPermissions(userType.this,
+										new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, 1);
 							}
 						})
 						.create()
@@ -294,7 +296,9 @@ public class userType extends AppCompatActivity {
 		editor.apply();
 		
 		intent = new Intent(this, signin_activity.class);
+/*
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+*/
 		
 		startActivity(intent);
 		finish();
@@ -308,7 +312,9 @@ public class userType extends AppCompatActivity {
 		editor.apply();
 		
 		intent = new Intent(this, signin_activity.class);
+/*
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+*/
 		
 		startActivity(intent);
 		finish();

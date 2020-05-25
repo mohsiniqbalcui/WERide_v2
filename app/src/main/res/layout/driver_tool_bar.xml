@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:elevation="4dp"
-    android:id="@+id/toolbar11"
+    android:id="@+id/driver_toolbar"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:title="driver"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     android:background="@color/upworkGreen">

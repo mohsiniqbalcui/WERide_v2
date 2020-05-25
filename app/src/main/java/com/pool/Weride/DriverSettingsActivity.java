@@ -62,9 +62,12 @@ public class DriverSettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_driver_settings);
 	try {
-	 
-	
-		mNameField = findViewById(R.id.name);
+	    
+        getSupportActionBar().setTitle("Driver Setting");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        
+        
+        mNameField = findViewById(R.id.name);
 		mPhoneField = findViewById(R.id.phone);
 		mCarField = findViewById(R.id.vehicleD);
 	

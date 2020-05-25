@@ -50,6 +50,12 @@ public class Rider_packages extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
+		
+		getActivity().getActionBar().setTitle("Rider packages");
+		getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+		
 		return inflater.inflate(R.layout.fragment_packages, container, false);
+		
+		
 	}
 }

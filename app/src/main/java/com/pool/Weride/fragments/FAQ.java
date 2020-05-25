@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toolbar;
 
 import androidx.fragment.app.Fragment;
 
@@ -28,14 +29,7 @@ public class FAQ extends Fragment {
 		// Required empty public constructor
 	}
 	
-	/**
-	 * Use this factory method to create a new instance of
-	 * this fragment using the provided parameters.
-	 *
-	 * @param param1 Parameter 1.
-	 * @param param2 Parameter 2.
-	 * @return A new instance of fragment FAQ.
-	 */
+	
 	// TODO: Rename and change types and number of parameters
 	public static FAQ newInstance(String param1, String param2) {
 		FAQ fragment = new FAQ();
@@ -60,6 +54,15 @@ public class FAQ extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		// Inflate the layout for this fragment
+		
+		Toolbar toolbar =  getActivity().findViewById(R.id.tb1);
+		
+		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				getActivity().onBackPressed();
+			}
+		});
 		return inflater.inflate(R.layout.fragment_faq, container, false);
 	}
 }

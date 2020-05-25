@@ -24,11 +24,13 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Rider_Groups"></activity>
+        <activity android:name=".Rider_Groups" android:parentActivityName=".rider_nav_layout"></activity>
+<!--
 
         <meta-data
             android:name="firebase_performance_logcat_enabled"
             android:value="true" />
+-->
 
         <activity
             android:name=".property_details"
@@ -89,10 +91,10 @@
             android:parentActivityName=".driver_nav_drawer" />
         <activity
             android:name=".rider_nav_layout"
-            android:label="Driver" />
+            android:label="Rider" />
         <activity
             android:name=".driver_nav_drawer"
-            android:label="Rider" />
+            android:label="Driver" />
         <activity android:name=".verifyPhoneActivity" />
         <activity android:name=".PhoneNumberActivity" />
         <activity android:name=".RiderMapActivity"

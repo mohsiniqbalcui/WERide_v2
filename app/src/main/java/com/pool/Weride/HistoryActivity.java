@@ -42,6 +42,9 @@ public class HistoryActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_history);
 		
+		getSupportActionBar().setTitle("Ride History");
+		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		
 		mBalance = findViewById(R.id.balance);
 		mPayout = findViewById(R.id.payout);
 		mPayoutEmail = findViewById(R.id.payoutEmail);

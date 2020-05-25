@@ -10,8 +10,9 @@
     >
 
     <include
-        layout="@layout/tool_bar">
+        layout="@layout/rider_tool_bar">
     </include>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -11,9 +11,6 @@
     android:gravity="center"
     android:id="@+id/ll">
 
-    <include >
-
-    </include>
     <LinearLayout
         android:clipToPadding="false"
         android:gravity="center"

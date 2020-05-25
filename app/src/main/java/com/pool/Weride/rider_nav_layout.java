@@ -33,6 +33,7 @@ public class rider_nav_layout extends AppCompatActivity implements NavigationVie
 		
 		Toolbar toolbar = findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
+		
 		drawer = findViewById(R.id.drawer_layout);
 		 navigationView = findViewById(R.id.nav_view);
 		navigationView.setNavigationItemSelectedListener(this);
@@ -140,9 +141,10 @@ public class rider_nav_layout extends AppCompatActivity implements NavigationVie
 	
 	public void shareAppLink(){
 		try {
+			
 			Intent shareIntent = new Intent(Intent.ACTION_SEND);
 			shareIntent.setType("text/plain");
-			shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My application name");
+			shareIntent.putExtra(Intent.EXTRA_SUBJECT, "WE Ride");
 			String shareMessage= "\nLet me recommend you this application\n\n";
 			shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID +"\n\n";
 			shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);

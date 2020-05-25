@@ -25,6 +25,8 @@ public class driver_nav_drawer extends AppCompatActivity implements NavigationVi
 	NavigationView navigationView;
 	ActionBarDrawerToggle toggle;
 	Editor type;
+	
+	Toolbar toolbar;
 	SharedPreferences mSharedPreferences1;
 	
 	
@@ -33,7 +35,7 @@ public class driver_nav_drawer extends AppCompatActivity implements NavigationVi
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_drawer_driver_layout);
 		
-		Toolbar toolbar = findViewById(R.id.driver_toolbar);
+		toolbar = findViewById(R.id.driver_toolbar);
 		setSupportActionBar(toolbar);
 		drawer = findViewById(R.id.drawer_driver_layout);
 		
@@ -64,6 +66,7 @@ public class driver_nav_drawer extends AppCompatActivity implements NavigationVi
 			case R.id.nav_home1:
 				startActivity(new Intent(driver_nav_drawer.this,DriverMapActivity.class));
 				navigationView.setCheckedItem(R.id.nav_home1);
+				
 				Toast.makeText(this, "Message fragment", Toast.LENGTH_SHORT).show();
 				break;
 				

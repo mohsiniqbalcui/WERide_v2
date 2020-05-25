@@ -80,7 +80,7 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
     private FusedLocationProviderClient mFusedLocationClient;
 
 
-    private Button mLogout, mSettings, mRideStatus, mHistory;
+    private Button  mRideStatus;
     private Switch mWorkingSwitch;
     private int status = 0;
 
@@ -104,6 +104,8 @@ public class DriverMapActivity extends FragmentActivity implements OnMapReadyCal
         try {
         setContentView(R.layout.activity_driver_map);
 			// Obtain the SupportMapFragment and get notified when the map is ready to be used.
+    getActionBar().setTitle("Driver Map");
+    getActionBar().setDisplayHomeAsUpEnabled(true);
     
             Dexter.withContext(this)
                     .withPermissions(

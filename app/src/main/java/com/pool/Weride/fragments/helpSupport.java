@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toolbar;
 
 import androidx.fragment.app.Fragment;
 
@@ -29,6 +30,14 @@ public class helpSupport extends Fragment {
 		
 		view = inflater.inflate(R.layout.fragment_help_support, container, false);
 		
+		Toolbar toolbar =  getActivity().findViewById(R.id.toolbarId);
+		
+		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				getActivity().onBackPressed();
+			}
+		});
 		mEditTextSubject = view.findViewById(R.id.edit_text_subject);
 		mEditTextMessage = view.findViewById(R.id.edit_text_message);
 		
