@@ -40,6 +40,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryViewHolders> {
             holder.time.setText(itemList.get(position).getTime());
         }
     }
+
     @Override
     public int getItemCount() {
         return this.itemList.size();

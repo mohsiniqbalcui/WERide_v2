@@ -3,16 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pool.Weride.HistoryActivity"
+    tools:context="com.pool.Weride.History.HistoryActivity"
     android:fitsSystemWindows="true"
     android:padding="16dp"
     android:orientation="vertical"
     android:id="@+id/layout">
-<include>
 
-</include>
     <TextView
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:text="Balance"
         android:layout_marginBottom="10dp"
@@ -38,7 +36,7 @@
             android:padding="13sp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Balance: 0€"
+            android:text="Balance: RS 0 "
             android:id="@+id/balance"
             android:visibility="visible" />
         <EditText
@@ -57,7 +55,8 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:text="rides "
+        android:text="Rides "
+        android:layout_marginBottom="@dimen/_10sdp"
         android:layout_height="wrap_content">
 
     </TextView>

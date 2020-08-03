@@ -1,6 +1,7 @@
 package com.pool.Weride.Model;
 
 public class Contact {
+
 	private int imageSource;
 	private String name;
 	private String contact;
@@ -12,8 +13,7 @@ public class Contact {
 		this.contact = contactText;
 		this.idtext = idtext;
 	}
-	
-	
+
 	public String getContact() {
 		return contact;
 	}

@@ -6,33 +6,24 @@
     android:layout_height="match_parent"
     android:background="@drawable/background"
     android:id="@+id/userTypeLayout"
-    tools:context="com.pool.Weride.userType">
+    tools:context=".Activities.userType">
 
     <!-- dark blue color #6537B5-->
     <nl.dionsegijn.konfetti.KonfettiView
         android:id="@+id/viewKonfetti"
+        android:layout_marginStart="@dimen/_29sdp"
+        android:outlineAmbientShadowColor="@color/app_color_1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="102sp"
-        android:layout_height="51sp"
-        android:layout_marginTop="45sp"
-        android:layout_marginEnd="20sp"
-        android:layout_marginBottom="200sp"
-        android:gravity="center_horizontal"
-        android:text="@string/driver"
-        android:textAlignment="center"
-        android:textColor="@color/text_color"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.867"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:layout_constraintVertical_bias="0.444" />
+
+    <!-- dark blue color #6537B5-->
+    <nl.dionsegijn.konfetti.KonfettiView
+        android:id="@+id/viewKonfetti1"
+        android:layout_marginStart="@dimen/_150sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 
     <LinearLayout
         android:id="@+id/linearLayout2"
@@ -58,9 +49,9 @@
         <Button
             android:id="@+id/driverUser"
             style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
-            android:layout_width="164dp"
+            android:layout_width="154dp"
             android:layout_height="172dp"
-            android:layout_marginEnd="0sp"
+            android:layout_marginEnd="@dimen/_30sdp"
             android:background="@drawable/driver"
             android:scaleType="fitCenter"></Button>
 
@@ -105,11 +96,11 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="108sp"
-        android:layout_height="50sp"
-        android:layout_marginTop="45sp"
-        android:layout_marginEnd="89sp"
-        android:layout_marginBottom="200sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_88sdp"
+        android:layout_marginBottom="@dimen/_150sdp"
         android:gravity="center_horizontal"
         android:text="@string/rider"
         android:textColor="@color/text_color"
@@ -122,5 +113,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         app:layout_constraintVertical_bias="0.45" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_36sdp"
+        android:layout_marginEnd="@dimen/_26sdp"
+        android:layout_marginBottom="@dimen/_150sdp"
+        android:gravity="center_horizontal"
+        android:text="@string/driver"
+        android:textAlignment="center"
+        android:textColor="@color/text_color"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="0.444" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

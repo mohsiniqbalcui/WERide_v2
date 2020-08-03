@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    tools:context="com.pool.Weride.verifyPhoneActivity">
+    tools:context=".Activities.Auth.PhoneNumber.verifyPhoneActivity">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"

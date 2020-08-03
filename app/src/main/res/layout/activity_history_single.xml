@@ -5,23 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.pool.Weride.HistorySingleActivity">
+    tools:context="com.pool.Weride.History.HistorySingleActivity">
 
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <include
-            layout="@layout/rider_tool_bar">
-        </include>
 
         <fragment
             android:id="@+id/map1"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
-            android:layout_height="250dp" />
+            android:layout_height="@dimen/_230sdp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,27 +29,28 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20sp"
-                android:text="From -                                              To" />
+                android:text="From -                                              To-" />
 
             <TextView
                 android:id="@+id/rideDistance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20sp"
-                android:text="distance"
+                android:text="Distance"
                 />
 
             <TextView
                 android:id="@+id/rideDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20sp"
-                android:text="date" />
+                android:text="Date" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:orientation="horizontal">
 
             <ImageView
@@ -75,14 +71,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20sp"
-                    android:text="name" />
+                    android:text="Name" />
 
                 <TextView
                     android:id="@+id/userPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20sp"
-                    android:text="phone" />
+                    android:text="Phone" />
             </LinearLayout>
         </LinearLayout>
 
@@ -92,16 +88,16 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:numStars="5"
-            android:stepSize="1"
-           />
+            android:stepSize="1" />
 
         <Button
             android:id="@+id/pay"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:text="Pay Here"
-            />
+            android:text="Pay Here" />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

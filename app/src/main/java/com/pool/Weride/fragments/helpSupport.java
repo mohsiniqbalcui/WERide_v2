@@ -14,7 +14,7 @@ import androidx.fragment.app.Fragment;
 import com.pool.Weride.R;
 
 
-public class helpSupport extends Fragment {
+public class helpSupport extends BaseFragment {
 	
 	
 	private EditText mEditTextTo;
@@ -23,21 +23,23 @@ public class helpSupport extends Fragment {
 	/*in this fragment simople user message will be mailed ot we roide support email */
 	
 	View view = null;
-	
+
+	@Override
+	protected void populateData() {
+
+	}
+
+	@Override
+	protected void loadData() {
+
+	}
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		
 		view = inflater.inflate(R.layout.fragment_help_support, container, false);
-		
-		Toolbar toolbar =  getActivity().findViewById(R.id.toolbarId);
-		
-		toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-			@Override
-			public void onClick(View view) {
-				getActivity().onBackPressed();
-			}
-		});
+
 		mEditTextSubject = view.findViewById(R.id.edit_text_subject);
 		mEditTextMessage = view.findViewById(R.id.edit_text_message);
 		
@@ -50,7 +52,12 @@ public class helpSupport extends Fragment {
 		});        // Inflate the layout for this fragmentb
 		return view;
 	}
-	
+
+	@Override
+	protected void fragmentBackPressed() {
+
+	}
+
 	private void sendMail() {
 		String recipientList = "weride.fyp@gmail.com";
 		String[] recipients = recipientList.split(",");

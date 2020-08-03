@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.pool.Weride.Addproperty">
+    tools:context="com.pool.Weride.Property.Addproperty">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"

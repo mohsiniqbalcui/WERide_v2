@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
         xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".wallet"
+        tools:context=".Slider_Intro.wallet"
         xmlns:android="http://schemas.android.com/apk/res/android">
 
     <ImageView

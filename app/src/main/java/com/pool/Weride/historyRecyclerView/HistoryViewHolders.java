@@ -7,7 +7,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.pool.Weride.HistorySingleActivity;
+import com.pool.Weride.History.HistorySingleActivity;
 import com.pool.Weride.R;
 
 

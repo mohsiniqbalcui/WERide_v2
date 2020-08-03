@@ -19,4 +19,5 @@ public class HistoryObject {
     public void setTime(String time) {
         this.time = time;
     }
+
 }

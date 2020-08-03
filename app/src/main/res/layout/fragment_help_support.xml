@@ -8,15 +8,6 @@
     android:padding="6dp"
     tools:context="com.pool.Weride.fragments.helpSupport">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarId"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        app:title="Complain"
-        android:background="@color/upworkGreen"
-        app:navigationIcon="?attr/homeAsUpIndicator"
-        />
-
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
