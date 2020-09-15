@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.pool.Weride">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
@@ -12,9 +13,9 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
         android:allowBackup="true"
@@ -23,66 +24,30 @@
         android:roundIcon="@mipmap/ic_launcher_weridet_round"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Main2Activity"></activity>
-        <activity
-            android:name=".Rider_Groups"
-            android:parentActivityName=".rider_nav_layout" />
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon,android:label">
+        <activity android:name=".map_aciti">
+
+            <!--            <intent-filter>
+                            <action android:name="android.intent.action.MAIN" />
+
+                            <category android:name="android.intent.category.LAUNCHER" />
+                        </intent-filter>-->
+        </activity>
         <!--
-        <meta-data
+            <meta-data
             android:name="firebase_performance_logcat_enabled"
             android:value="true" />
         -->
+        <activity android:name=".Util.permission.location_permission" />
+        <activity android:name=".Activities.splash"></activity>
+        <activity android:name=".Activities.Auth.LoginRegister.signin_activity" />
+        <activity android:name=".Activities.Auth.LoginRegister.signup_activity" />
+        <activity android:name=".Activities.userType" />
         <activity
-            android:name=".property_details"
-            android:label="details">
+            android:name=".Slider_Intro.wallet"
+            android:parentActivityName=".Users.Driver.NavHome.driver_nav_drawer" />
 
-            <!--
-              <intent-filter>
-                  <action android:name="android.intent.action.MAIN" />
-
-                  <category android:name="android.intent.category.LAUNCHER" />
-              </intent-filter>
-            -->
-
-        </activity>
-        <activity
-            android:name=".Addproperty"
-            android:label="Add property">
-
-            <!--
-             <intent-filter>
-                 <action android:name="android.intent.action.MAIN" />
-
-                 <category android:name="android.intent.category.LAUNCHER" />
-             </intent-filter>
-            -->
-        </activity>
-        <activity android:name=".location_permission" />
-        <activity android:name=".splash">
-
-            <!--
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
-        </activity>
-        <activity android:name=".signin_activity" />
-        <activity android:name=".signup_activity" />
-        <activity android:name=".userType" />
-        <activity
-            android:name=".wallet"
-            android:parentActivityName=".driver_nav_drawer" />
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
-        -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key" />
@@ -91,42 +56,39 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity
-            android:name=".DriverMapActivity"
-            android:parentActivityName=".driver_nav_drawer" />
+            android:name=".Users.Driver.Map.DriverMapActivity"
+            android:parentActivityName=".Users.Driver.NavHome.driver_nav_drawer" />
         <activity
-            android:name=".rider_nav_layout"
+            android:name=".Users.Rider.NavHome.rider_nav_layout"
             android:label="Rider" />
         <activity
-            android:name=".driver_nav_drawer"
+            android:name=".Users.Driver.NavHome.driver_nav_drawer"
             android:label="Driver" />
-        <activity android:name=".verifyPhoneActivity" />
-        <activity android:name=".PhoneNumberActivity" />
+        <activity android:name=".Activities.Auth.PhoneNumber.verifyPhoneActivity" />
+        <activity android:name=".Activities.Auth.PhoneNumber.PhoneNumberActivity" />
         <activity
-            android:name=".RiderMapActivity"
-            android:parentActivityName=".rider_nav_layout" />
+            android:name=".Users.Rider.RiderSetting.RiderSettingsActivity"
+            android:parentActivityName=".Users.Rider.NavHome.rider_nav_layout" />
         <activity
-            android:name=".RiderSettingsActivity"
-            android:parentActivityName=".rider_nav_layout" />
-        <activity
-            android:name=".DriverSettingsActivity"
-            android:parentActivityName=".driver_nav_drawer" />
-        <activity android:name=".HistoryActivity" />
-        <activity android:name=".HistorySingleActivity">
+            android:name=".Users.Driver.setting.DriverSettingsActivity"
+            android:parentActivityName=".Users.Driver.NavHome.driver_nav_drawer" />
+        <activity android:name=".History.HistoryActivity" />
+        <activity android:name=".History.HistorySingleActivity"></activity> <!-- this hould be the staring screen in App other wise app flow will not be Good -->
+        <activity android:name=".Slider_Intro.IntroActivity">
 
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MapActivity">
             <!--
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-            -->
-        </activity>
-        <activity android:name=".IntroActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
     </application>
 

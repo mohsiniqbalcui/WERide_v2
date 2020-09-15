@@ -2,11 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pool.Weride.RiderMapActivity">
+    tools:context=".Users.Rider.Map.RiderHomeMapFragment">
 
-    <include
-        layout="@layout/rider_tool_bar">
-    </include>
 
     <fragment
         android:id="@+id/map"
@@ -18,22 +15,6 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-<!--
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"
-            android:id="@+id/buttons">
-
-            <Button
-                android:layout_width="144dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/logout1"
-                android:text="logout" />
-
-        </LinearLayout>
--->
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
@@ -72,34 +53,61 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingLeft="40sp">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/driverName"
-                    android:hint="driver name"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:hint="Name: Jhon Alex"
                     android:paddingBottom="10sp"
-                    android:paddingTop="20sp"/>
+                    android:paddingTop="20sp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/driverPhone"
-                    android:hint="number : 0342 4475733"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:hint="Phone Number : 0301 4322609"
                     android:paddingBottom="10sp"
-                    android:paddingTop="20sp"/>
+                    android:paddingTop="20sp" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/driverCar"
-                    android:hint="Toyta LHI 2092 "
+                    android:fontFamily="@font/montserrat_bold"
+                    android:hint="Car Number: Toyta LHI 2092"
                     android:paddingBottom="10sp"
-                    android:paddingTop="20sp"/>
-                <RatingBar
+                    android:paddingTop="20sp" />
+
+                <TextView
+                    android:id="@+id/destination"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:hint="Destination: Comsats "
+                    android:paddingTop="20sp"
+                    android:paddingBottom="10sp" />
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_10sdp"
                     android:id="@+id/ratingBar1"
                     android:layout_gravity="center"
                     android:numStars="5"
+                    android:visibility="invisible"
                     android:stepSize="0.5" />
+
+                <Button
+                    android:id="@+id/accept"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:background="@drawable/button_gradient"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Accept Driver Request" />
             </LinearLayout>
         </LinearLayout>
 
@@ -129,7 +137,7 @@
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="    Rick Shaw "
+                    android:text="    Rick Shaw   "
                     android:layout_marginRight="20dp"
                     android:drawableLeft="@drawable/rickshaw"
                     android:id="@+id/RickShaw" />
@@ -141,7 +149,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_gradient"
-                android:text="call driver"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="Call driver"
                 android:id="@+id/callride" />
         </LinearLayout>
     </LinearLayout>
@@ -155,8 +164,24 @@
         android:background="@null"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
-        android:src="@drawable/ic_hospital"
-        />
+        android:src="@drawable/ic_hospital" />
+
+    <FrameLayout
+        android:id="@+id/progressBarHolder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.4"
+        android:animateLayoutChanges="true"
+        android:background="#000000"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminate="true" />
+    </FrameLayout>
 
 </FrameLayout>
 

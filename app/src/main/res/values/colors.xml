@@ -65,5 +65,30 @@
     <color name="white">#FFFEFE</color>
     <color name="colorText">#F44336</color>
 
+    <!--App color-->
+    <color name="app_color_1">#F56666</color>
+    <color name="app_color_2">#FF9458</color>
+
+    <!--common color -->
+    <color name="colorWhite">#ffffff</color>
+
+    <color name="colorGray">#828282</color>
+    <color name="colorRed">#FF0000</color>
+
+    <!--text color -->
+    <color name="text_black">#333333</color>
+    <color name="text_darker">#333333</color>
+    <color name="text_lighter">#707070</color>
+    <color name="text_blue">#186AA5</color>
+
+    <!--background colors -->
+    <color name="app_bg_white">#ffffff</color>
+    <color name="picker_bg">#EFEFF4F0</color>
+    <color name="transparent">#00F6F6F6</color>
+
+    <!--App gradient color-->
+    <color name="app_gradient_one">#FF9458</color>
+    <color name="app_gradient_two">#FF9358</color>
+    <color name="app_gradient_three">#F56666</color>
 
 </resources>

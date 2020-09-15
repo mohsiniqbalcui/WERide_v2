@@ -1,27 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.pool.Weride.HistorySingleActivity">
+    tools:context="com.pool.Weride.History.HistorySingleActivity">
 
     <LinearLayout
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <include
-            layout="@layout/rider_tool_bar">
-        </include>
 
         <fragment
             android:id="@+id/map1"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="match_parent"
-            android:layout_height="250dp" />
+            android:layout_height="@dimen/_230sdp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,34 +28,47 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20sp"
-                android:text="From -                                              To" />
+                android:fontFamily="@font/montserrat_bold"
+                android:text="From :                    Rawind, Lahore
+                            \n\nTo :                         Sector C Behriya Town" />
 
             <TextView
                 android:id="@+id/rideDistance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="20sp"
-                android:text="distance"
-                />
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Distance:              17.8 km" />
 
             <TextView
                 android:id="@+id/rideDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
                 android:layout_marginBottom="20sp"
-                android:text="date" />
+                android:text="Wednesday:          Monday, 12 August 2020 " />
+
+            <TextView
+                android:id="@+id/rideTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Time                      20 Min " />
+
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
             android:orientation="horizontal">
 
             <ImageView
                 android:id="@+id/userImage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@mipmap/ic_default_user" />
+                android:src="@drawable/driverimage" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -75,14 +82,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20sp"
-                    android:text="name" />
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Driver Name:    Jhon Alex" />
 
                 <TextView
                     android:id="@+id/userPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20sp"
-                    android:text="phone" />
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Driver Phone:    03014322609" />
             </LinearLayout>
         </LinearLayout>
 
@@ -92,16 +101,17 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:numStars="5"
-            android:stepSize="1"
-           />
+            android:stepSize="1" />
 
         <Button
             android:id="@+id/pay"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/button_gradient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:enabled="false"
-            android:text="Pay Here"
-            />
+            android:text="Pay " />
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

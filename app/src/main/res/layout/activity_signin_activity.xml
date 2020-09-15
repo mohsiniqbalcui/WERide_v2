@@ -8,29 +8,31 @@
     android:orientation="vertical"
     android:paddingLeft="50dp"
     android:paddingRight="50dp"
-    tools:context="com.pool.Weride.signin_activity">
+    tools:context=".Activities.Auth.LoginRegister.signin_activity">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="@dimen/_55sdp"
         android:layout_marginBottom="50dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Login"
         android:textColor="@color/icons"
         android:textSize="30sp"
         android:textStyle="bold">
-
     </TextView>
 
     <EditText
         android:id="@+id/LoginEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginBottom="15dp"
+        android:drawableLeft="@drawable/ic_baseline_email_24"
+        android:drawablePadding="@dimen/_5sdp"
         android:fontFamily="sans-serif-condensed-light"
+        android:elevation="@dimen/_6sdp"
         android:background="@drawable/textviewrounded"
         android:hint="Email"
         android:inputType="textEmailAddress"
@@ -40,7 +42,10 @@
         android:id="@+id/LoginPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_marginBottom="10dp"
+        android:drawableLeft="@drawable/ic_baseline_vpn_key_24"
+        android:drawablePadding="@dimen/_5sdp"
+        android:elevation="@dimen/_6sdp"
         android:maxLength="8"
         android:background="@drawable/textviewrounded"
         android:hint="@string/password"
@@ -53,7 +58,7 @@
         android:id="@+id/btnsignin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:background="@drawable/buttonshape"
         android:text="@string/sign_in"
         android:textStyle="bold"
@@ -63,10 +68,10 @@
         android:id="@+id/textView44"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/_10sdp"
         android:gravity="center"
         android:text="@string/not_having_account"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="@dimen/_10sdp"
         android:textColor="#FFFFFF" />
 
     <Button

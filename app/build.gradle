@@ -12,7 +12,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.pool.uber"
-        minSdkVersion 21// from 16
+        minSdkVersion 21
         //  resConfigs "en", "mdpi", "hdpi", "xhdpi", "xxhdpi", "nodpi"
         resConfigs "en", "xhdpi"
         targetSdkVersion 28
@@ -21,7 +21,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
         vectorDrawables.useSupportLibrary = true
-
     }
 
 
@@ -38,6 +37,7 @@ android {
         }
     }*/
 /* must add this*/
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -50,7 +50,7 @@ android {
 
 //keep this false untill final release otherwise create problem in debuging
 
-            //shrinkResources true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             debuggable = true
             renderscriptDebuggable = true
@@ -69,7 +69,7 @@ dependencies {
     androidTestImplementation('androidx.test.espresso:espresso-core:3.2.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     implementation 'com.google.firebase:firebase-database:19.3.0'
@@ -77,19 +77,30 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:19.1.1'
     implementation 'com.google.firebase:firebase-perf:19.0.7'
 
+    // celebration android library
     implementation 'nl.dionsegijn:konfetti:1.2.0'
 
-    // mutiple firebae sign in implementation
-//    implementation 'com.firebaseui:firebase-ui-auth:6.2.0'
+//Dimen
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+//    implementation 'com.intuit.ssp:ssp-android:1.0.5'
 
+    // like animation
+    implementation 'com.github.jd-alexander:LikeButton:0.2.3'
+    // video play
+    implementation 'com.henryblue.mxvideoplayer:xvideoplayer:1.2.1'
+    // for gif play
+    implementation 'com.github.Gavras:GIFView:v1.2'
+// Circle Image View
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    // Image Picker
+    implementation 'com.github.dhaval2404:imagepicker-support:1.7.1'
 
+    
     implementation 'com.google.firebase:firebase-analytics:17.4.0'
 
     implementation 'com.google.firebase:firebase-crashlytics:17.0.0'
 
-/*
-    implementation 'com.google.firebase:firebase-analytics:17.0.0'
-*/
+
     implementation 'com.google.android.gms:play-services-maps:17.0.0'
     /* https://stackoverflow.com/questions/54638080/places-for-android-api-deprecated-alternative/55045772#55045772
     implementation 'com.google.android.gms:play-services-places:17.0.0'
@@ -97,7 +108,6 @@ dependencies {
 
     implementation 'com.google.android.libraries.places:places:2.2.0'
 
-    // implementation 'com.google.android.libraries.places:places-compat:2.1.0'
 
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
     implementation 'com.google.android.gms:play-services-identity:17.0.0'
@@ -112,17 +122,14 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
 
     implementation 'com.android.support:design:28.0.0'
+    implementation 'com.google.android.material:material:1.0.0-rc01'
     implementation 'com.android.support:cardview-v7:28.0.0'
     implementation 'com.github.jd-alexander:library:1.1.0'
 
-
-    //noinspection GradleCompatible
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 
-
     implementation 'com.squareup.okhttp3:okhttp:4.6.0'
-    // implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
 
     //noinspection UseOfBundledGooglePlayServices
 
@@ -132,7 +139,6 @@ dependencies {
 
     testImplementation 'junit:junit:4.12'
 
-//    implementation 'com.jakewharton:butterknife:8.8.1'
 
     implementation 'com.shobhitpuri.custombuttons:google-signin:1.0.0'
     implementation 'com.squareup.picasso:picasso:2.71828'
@@ -144,6 +150,6 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     /*run time permission acessing for marmelow error handling*/
     implementation 'com.karumi:dexter:6.1.0'
-
+    implementation 'com.github.mancj:MaterialSearchBar:0.8.5'
 
 }

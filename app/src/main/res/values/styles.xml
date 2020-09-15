@@ -3,18 +3,220 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">@color/colorPrimary</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/primary_text</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+    </style>
+
+
+    <!--
+        <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/dialog_slide_up</item>
+        <item name="android:windowExitAnimation">@anim/dialog_slide_bottom</item>
+    </style>
+
+    <style name="DefaultNumberPickerTheme" parent="AppTheme">
+        <item name="colorControlNormal">@color/transparent</item>
+    </style>
+
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+
+    <style name="back_image_style">
+        <item name="android:layout_width">@dimen/_25sdp</item>
+        <item name="android:layout_height">@dimen/_25sdp</item>
+        <item name="android:layout_marginStart">@dimen/_12sdp</item>
+        <item name="android:layout_marginTop">@dimen/_12sdp</item>
+        <item name="android:src">@drawable/ic_back_white</item>
+
+    </style>
+
+    <style name="headingTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/_18sdp</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+
+    </style>
+
+    <style name="mediumTextStyle_with_margin">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_16sdp</item>
+        <item name="android:layout_marginTop">@dimen/_16sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_16sdp</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+
+    </style>
+
+    <style name="largeTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+    </style>
+
+    <style name="xlTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/_16sdp</item>
+    </style>
+
+    <style name="mediumTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+
+    <style name="mediumTextStyle_semibold" parent="mediumTextStyle">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+    </style>
+
+    <style name="top_bar_title_style" parent="mediumTextStyle_semibold">
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/text_blue</item>
+    </style>
+
+    <style name="mediumTextStyle_bold" parent="mediumTextStyle">
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="mediumTextStyle_regular" parent="mediumTextStyle">
+        <item name="fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="mediumTextStyle_medium" parent="mediumTextStyle">
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="smallTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+    </style>
+
+    <style name="smallTextStyle_regular" parent="smallTextStyle">
+        <item name="fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="smallTextStyle_semibold" parent="smallTextStyle">
+        <item name="fontFamily">@font/montserrat_semibold</item>
+    </style>
+
+    <style name="smallTextStyle_bold" parent="smallTextStyle">
+        <item name="fontFamily">@font/montserrat_bold</item>
+    </style>
+
+    <style name="tineTextStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">@dimen/_8sdp</item>
+
+    </style>
+
+    <style name="tineTextStyle_regular" parent="tineTextStyle">
+        <item name="fontFamily">@font/montserrat_regular</item>
+    </style>
+
+
+    <style name="authEditTextStyle">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/_30sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_30sdp</item>
+        <item name="android:backgroundTint">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+    </style>
+
+    <style name="authButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/_40sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_32sdp</item>
+        <item name="android:layout_marginTop">@dimen/_32sdp</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:src">@drawable/ic_tick_gray</item>
+    </style>
+
+    <style name="editProfileTextViewStyle" parent="mediumTextStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:gravity">end</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/text_lighter</item>
+    </style>
+
+    <style name="editProfileLabelTextViewStyle" parent="editProfileTextViewStyle">
+        <item name="fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/text_black</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">start</item>
+    </style>
+
+    <style name="auth_social_icon">
+        <item name="android:layout_width">@dimen/_35sdp</item>
+        <item name="android:layout_height">@dimen/_35sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_10sdp</item>
+    </style>
+
+    <style name="bottom_bar_image_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="bottom_bar_frame_style">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-<!--
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="commonRecyclerViewStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="top_bar_ioc_style">
+        <item name="android:layout_width">@dimen/_20sdp</item>
+        <item name="android:layout_height">@dimen/_20sdp</item>
+
+    </style>
+
+    <style name="top_bar_layout_style">
+        <item name="android:layout_marginStart">@dimen/_12sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_12sdp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+
+    </style>
 
 </resources>

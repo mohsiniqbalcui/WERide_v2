@@ -1,27 +1,27 @@
 package com.pool.Weride.Model;
 
 public class Contact {
+
 	private int imageSource;
 	private String name;
 	private String contact;
 	private int idtext;
-	
-	public Contact(int imagesource, String nameText, String contactText,int idtext) {
+
+	public Contact(int imagesource, String nameText, String contactText, int idtext) {
 		this.imageSource = imagesource;
 		this.name = nameText;
 		this.contact = contactText;
 		this.idtext = idtext;
 	}
-	
-	
+
 	public String getContact() {
 		return contact;
 	}
-	
+
 	public int getImageresource() {
 		return imageSource;
 	}
-	
+
 	public String getName() {
 		return name;
 	}

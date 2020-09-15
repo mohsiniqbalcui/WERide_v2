@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.pool.Weride.location_permission">
+    tools:context="com.pool.Weride.Util.permission.location_permission">
 
     <ImageView
         android:id="@+id/imageView2"

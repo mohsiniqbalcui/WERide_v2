@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.pool.Weride.rider_nav_layout"
+    tools:context="com.pool.Weride.Users.Rider.NavHome.rider_nav_layout"
     tools:openDrawer="start">
     <!--drawer_layout-->
 
@@ -16,19 +16,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
-<!--
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/colorPrimary"
-            app:title="@string/rider"
-            android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            />-->
 
         <include layout="@layout/rider_tool_bar"></include>
+
         <!--fragment container this container will contain every fragment home-->
         <FrameLayout
             android:id="@+id/fragment_container"

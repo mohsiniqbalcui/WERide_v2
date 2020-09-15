@@ -21,8 +21,12 @@
     string in this file.
     -->
 
-    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
-        	AIzaSyD91yBQI13Fqoo6gdh7ie21N8XJ8paQHQk
-    </string>
+    <string name="google_maps_key">AIzaSyD91yBQI13Fqoo6gdh7ie21N8XJ8paQHQk</string>
 
+    <string name="google_maps_key2">AIzaSyBHstQUQwsbYh8rvLS_tbzWAG5tVU11heg</string>
+
+    <!--
+        https://maps.googleapis.com/maps/api/directions/json?
+        origin=Toronto&destination=Montreal
+        &key=AIzaSyBHstQUQwsbYh8rvLS_tbzWAG5tVU11heg-->
 </resources>

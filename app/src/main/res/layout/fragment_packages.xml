@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.pool.Weride.Rider_packages">
-
+    tools:context=".Users.Rider.Packages.Rider_packages">
 
 
     <ScrollView
@@ -14,32 +13,21 @@
         android:cursorVisible="true"
         android:fillViewport="true">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="vertical"
-        android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
 
-        <TextView
+                <TextView
             android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:text="Packages"
-            android:layout_marginStart="16sp"
-            android:layout_marginBottom="10dp"
-            android:textStyle="bold"
-            android:textColor="@color/places_autocomplete_prediction_primary_text"
-            android:textSize="26sp"
-            android:layout_height="wrap_content">
-        </TextView>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_marginStart="16sp"
-            android:text="Select package that save on your daily rides"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:text="Select package that save on your daily rides"
             android:textColor="@color/places_autocomplete_prediction_primary_text_highlight"
             android:layout_height="wrap_content">
         </TextView>
@@ -53,6 +41,7 @@
         android:layout_height="match_parent">
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/p1"
             android:layout_width="match_parent"
             android:layout_height="176dp"
             android:layout_marginBottom="10dp"
@@ -148,6 +137,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/p2"
             android:layout_width="match_parent"
             android:layout_height="176dp"
             android:layout_marginTop="30dp"
@@ -248,6 +238,7 @@
 
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/p3"
             android:layout_width="match_parent"
             android:layout_height="176dp"
             android:layout_marginTop="30dp"

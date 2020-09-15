@@ -3,14 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.pool.Weride.DriverMapActivity">
+    tools:context=".Users.Driver.Map.DriverMapActivity">
 
 
     <fragment
         android:id="@+id/map11"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,18 +25,20 @@
             android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
         -->
-        <include layout="@layout/driver_tool_bar">
-        </include>
+        <!--
+                <include layout="@layout/driver_tool_bar"></include>
+        -->
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text=" Working "
                 android:layout_margin="10sp"
-                android:id="@+id/workingSwitch"/>
+                android:id="@+id/workingSwitch" />
 
             <Switch
                 android:layout_width="wrap_content"
