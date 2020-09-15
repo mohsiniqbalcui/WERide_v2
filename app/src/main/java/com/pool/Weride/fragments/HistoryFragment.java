@@ -22,13 +22,12 @@ public class HistoryFragment extends BaseFragment {
     String TAG = "FAQ";
     Toolbar toolbar;
 
-    public void FAQ() {
-        // Required empty public constructor
-    }
-
-
     public static FAQ newInstance() {
         return new FAQ();
+    }
+
+    public void FAQ() {
+        // Required empty public constructor
     }
 
     @Override
@@ -77,7 +76,7 @@ public class HistoryFragment extends BaseFragment {
     }
 
     private void intiVIew(View view) {
-        toolbar =  view.findViewById(R.id.tb1);
+        toolbar = view.findViewById(R.id.tb1);
 
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {

@@ -31,8 +31,8 @@ public abstract class BaseFragment extends Fragment implements ProgressBarInterF
 
     protected FragmentActivity mActivity;
     protected View mView;
-    private TextView txtErrorMsg;
     boolean isFreindList;
+    private TextView txtErrorMsg;
 
     public BaseFragment() {
 
