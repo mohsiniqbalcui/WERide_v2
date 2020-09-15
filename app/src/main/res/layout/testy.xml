@@ -1,0 +1,59 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- the circular icon on the left -->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_place_24"
+        android:tint="@android:color/white"
+        android:layout_marginRight="24dp"
+        android:padding="4dp"
+        android:background="@drawable/ic_circle"/>
+
+    <!-- the blue line -->
+    <FrameLayout
+        android:layout_width="15dp"
+        android:layout_height="match_parent"
+        android:padding="2dp"
+        android:id="@+id/item_line">
+
+        <!-- the semi transparent circle on the line -->
+        <View
+            android:layout_width="11dp"
+            android:layout_height="11dp"
+            android:background="@drawable/ic_circle"/>
+
+    </FrameLayout>
+
+    <!-- views at the right of the blue line -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="24dp"
+        android:paddingBottom="32dp"
+        android:clickable="true"
+        android:background="?android:attr/selectableItemBackground">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:id="@+id/item_title"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_subtitle"/>
+
+        <!-- other views -->
+
+    </LinearLayout>
+</LinearLayout>
